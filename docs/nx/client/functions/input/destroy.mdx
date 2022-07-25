@@ -1,0 +1,54 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Destroy
+
+This function well destroy the actual input menu.
+
+<Tabs>
+<TabItem value="ts" label="TypeScript">
+
+```typescript
+const NX = exports.NX.useClient()
+
+NX.Input.Destroy((res: RespT) => {
+    if(res.status === 'succes') {
+        console.log('Destroyed !')
+    }
+})
+
+interface RespT {
+  status: 'succes' | 'error'
+  message?: any
+  data?: any
+}
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const NX = exports.NX.useClient()
+
+NX.Input.Destroy((res) => {
+    if(res.status === 'succes') {
+        console.log('Destroyed !')
+    }
+})
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua
+local NX = exports['NX']:useClient()
+
+NX.Input.Destroy(function (res)
+    if(res.status == 'succes') then
+        print('Destroyed !')
+    end
+end)
+```
+
+</TabItem>
+</Tabs>

@@ -1,0 +1,85 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Create
+
+This function well create an input menu.
+
+<Tabs>
+<TabItem value="ts" label="TypeScript">
+
+```typescript
+const NX = exports.NX.useClient()
+
+NX.Input.Create({
+    title: 'title',
+    rows: [
+        {
+            label: 'Input 1',
+            id: 'input1'
+        },
+        {
+            label: 'Input 2',
+            id: 'input2'
+        },
+    ]
+}, (res: RespT) => {
+    // 
+})
+
+
+interface RespT {
+  status: 'succes' | 'error'
+  message?: any
+  data?: any
+}
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const NX = exports.NX.useClient()
+
+NX.Input.Create({
+    title: 'title',
+    rows: [
+        {
+            label: 'Input 1',
+            id: 'input1'
+        },
+        {
+            label: 'Input 2',
+            id: 'input2'
+        },
+    ]
+}, (res) => {
+    // 
+})
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua
+local NX = exports['NX']:useClient()
+
+NX.Input.Create({
+    title = "title", 
+    rows = {
+        {
+            label = 'Input 1',
+            id = 'input1'
+        },
+        {
+            label = 'Input 2',
+            id = 'input2'
+        },
+    }
+}, function (res)
+    //
+end)
+```
+
+</TabItem>
+</Tabs>

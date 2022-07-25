@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
+  title: 'NX',
   tagline: 'Dinosaurs are cool',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
@@ -16,8 +16,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'NX', // Usually your GitHub org/user name.
+  projectName: 'NX', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -57,15 +57,15 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'logo',
+          src: 'img/logo.png',
+          width: "90px",
         },
         items: [
           {
             type: 'doc',
-            docId: 'naf/naf',
+            docId: 'nx/nx',
             position: 'left',
             label: 'Tutorial',
           },
@@ -74,11 +74,38 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
+          {
+            href: 'https://discord.gg/d6pRBjBUyn',
+            label: 'Discord',
+            position: 'right',
+          },
         ],
       },
       footer: {
-        style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        style: 'light',
+        logo: {
+          alt: 'Meta Open Source Logo',
+          src: 'img/logo.png',
+          href: 'https://discord.gg/d6pRBjBUyn',
+          width: 160,
+          height: 51,
+        },
+        copyright: `Copyright © ${new Date().getFullYear()} niiy.`,
+        links: [
+          {
+            title: 'About me',
+            items: [
+              {
+                label: 'Discord',
+                href: 'https://discord.gg/d6pRBjBUyn',
+              },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/nniiiiyy',
+              }
+            ],
+          },
+        ],
       },
       prism: {
         theme: lightCodeTheme,

@@ -1,0 +1,42 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# IsActive
+
+This function well return a boolean.
+
+<Tabs>
+<TabItem value="ts" label="TypeScript">
+
+```typescript
+const NX = exports.NX.useClient()
+
+if(NX.Input.IsActive()) {
+    console.log('Menu active !')
+} 
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const NX = exports.NX.useClient()
+
+if(NX.Input.IsActive()) {
+    console.log('Menu active !')
+}
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua
+local NX = exports['NX']:useClient()
+
+if(NX.Input.IsActive()) then
+    print('menu active !')
+end
+```
+
+</TabItem>
+</Tabs>
