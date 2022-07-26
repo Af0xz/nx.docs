@@ -24,12 +24,11 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Centralize',
+    title: 'Customizable',
     Svg: require('@site/static/img/centralize.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        <code>NX</code>lets you costume anything you want with ease.
       </>
     ),
   },

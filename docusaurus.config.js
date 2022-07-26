@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 const config = {
   title: 'NX',
   tagline: '[NX] is a FiveM Framework, created by niiyy.',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://nxf.netlify.app/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -56,7 +56,7 @@ const config = {
       navbar: {
         logo: {
           alt: 'logo',
-          src: 'img/logo.png',
+          src: 'img/logopng.png',
           width: '90px',
         },
         items: [
@@ -88,7 +88,7 @@ const config = {
         style: 'light',
         logo: {
           alt: 'Meta Open Source Logo',
-          src: 'img/logo.png',
+          src: 'img/logopng.png',
           href: 'https://discord.gg/d6pRBjBUyn',
           width: 160,
           height: 51,
