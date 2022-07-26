@@ -1,0 +1,54 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# DrawText3D
+
+This function well draw a 3D text in coords provided.
+
+```typescript
+NX.Misc.DrawText3D(coords, text, size, font, color)
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript">
+
+```typescript
+const NX = exports.NX.useClient()
+
+NX.Misc.DrawText3D([123.0, 123.0, 123.0], 'text', 1, 1, [0, 0, 0])
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const NX = exports.NX.useClient()
+
+NX.Misc.DrawText3D([123.0, 123.0, 123.0], 'text', 1, 1, [0, 0, 0])
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua
+local NX = exports['NX']:useClient()
+
+NX.Misc.DrawText3D({123.000, 123.000, 123.000}, 'text', 1, 1, {0, 0, 0})
+```
+
+</TabItem>
+</Tabs>
+
+## Arguments
+
+| Argument | Data Type | Optional | Default Value   | Explanation             |
+| -------- | --------- | -------- | --------------- | ----------------------- |
+| coords   | Array     | No       | -               | The coords to draw text |
+| text     | String    | No       | -               | The text to display     |
+| size     | Number    | No       | -               | The text size           |
+| font     | Number    | No       | -               | The text font           |
+| color    | Array     | Yes      | [255, 255, 255] | The text color `RGB`    |

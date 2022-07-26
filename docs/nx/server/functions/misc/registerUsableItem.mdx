@@ -1,0 +1,72 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# RegisterUsableItem
+
+This function well create a new vehicle and return it in the cb.
+
+```typescript
+NX.Misc.RegisterUsableItem(name, cb)
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript">
+
+```typescript
+const NX = exports.NX.useServer()
+
+NX.Misc.RegisterUsableItem('bread', (source) => {
+  const naPlayer = NX.Players.Get(source)
+  const item = naPlayer.HasItem('bread')
+
+  if (item) {
+    naPlayer.RemoveItem('bread', 1)
+  }
+})
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const NX = exports.NX.useServer()
+
+NX.Misc.RegisterUsableItem('bread', (source) => {
+  const naPlayer = NX.Players.Get(source)
+  const item = naPlayer.HasItem('bread')
+
+  if (item) {
+    naPlayer.RemoveItem('bread', 1)
+  }
+})
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua
+local NX = exports['NX']:useServer()
+
+NX.Misc.RegisterUsableItem('bread', function()
+    local naPlayer = NX.Players.Get(source)
+    local item = naPlayer.HasItem("bread")
+
+    if(item) then
+        naPlayer.RemoveItem('bread', 1)
+    end
+end)
+```
+
+</TabItem>
+</Tabs>
+
+## Arguments
+
+| Argument | Data Type | Optional | Default Value | Explanation                                            |
+| -------- | --------- | -------- | ------------- | ------------------------------------------------------ |
+| name     | String    | No       | -             | The item name to register                              |
+| cb       | Function  | No       | -             | The callback that well be executed after item was used |

@@ -1,0 +1,71 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# EmitServerEvent
+
+This function well emit a server event.
+
+```typescript
+NX.Misc.EmitServerEvent(eventName, cb, ...args)
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript">
+
+```typescript
+const NX = exports.NX.useClient()
+
+NX.Misc.EmitServerEvent(
+  'NX::helloWorld',
+  (name: string, amount: number) => {
+    console.log(name)
+    console.log(amount)
+  },
+  'arg1',
+  'arg2'
+)
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const NX = exports.NX.useClient()
+
+NX.Misc.EmitServerEvent(
+  'NX::helloWorld',
+  (name, amount) => {
+    console.log(name)
+    console.log(amount)
+  },
+  'arg1',
+  'arg2'
+)
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua
+local NX = exports['NX']:useClient()
+
+NX.Misc.EmitServerEvent('NX::helloWorld', function (name, amount)
+    print(name)
+    print(amount)
+end, 'arg1', 'arg2')
+```
+
+</TabItem>
+</Tabs>
+
+## Arguments
+
+| Argument  | Data Type | Optional | Default Value | Explanation                                              |
+| --------- | --------- | -------- | ------------- | -------------------------------------------------------- |
+| eventName | String    | No       | -             | The event name to trigger                                |
+| cb        | Function  | No       | -             | The callback that well be executed after server response |
+| args      | Any       | Yes      | -             | The args to send to server side                          |

@@ -16,8 +16,41 @@
   }
 }
 
+.specialColor {
+  color: var(--ifm-color-primary);
+}
+
+.textContainer {
+  width: 40%;
+}
+
 .buttons {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.githubStars {
+  display: flex;
+  margin-top: 20px;
+}
+
+.githubStarsButton {
+  border: none;
+  margin-left: 24px;
+  overflow: hidden;
+}
+
+.logo {
+  width: 550px;
+}
+
+@media screen and (max-width: 996px) {
+  .logo {
+    margin-top: 50px;
+  }
+  .textContainer {
+    width: 100%;
+  }
 }

@@ -1,12 +1,12 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
-# IsActive
+# Create
 
-This function well return a boolean.
+This function well create a random vehicle with random color.
 
 ```typescript
-NX.Input.IsActive()
+NX.Vehicles.Random()
 ```
 
 ---
@@ -19,9 +19,7 @@ NX.Input.IsActive()
 ```typescript
 const NX = exports.NX.useClient()
 
-if (NX.Input.IsActive()) {
-  console.log('Menu active !')
-}
+NX.Vehicles.Random()
 ```
 
 </TabItem>
@@ -30,20 +28,14 @@ if (NX.Input.IsActive()) {
 ```js
 const NX = exports.NX.useClient()
 
-if (NX.Input.IsActive()) {
-  console.log('Menu active !')
-}
+NX.Vehicles.Random()
 ```
 
 </TabItem>
 <TabItem value="lua" label="Lua">
 
 ```lua
-local NX = exports['NX']:useClient()
-
-if(NX.Input.IsActive()) then
-    print('menu active !')
-end
+NX.Vehicles.Random()
 ```
 
 </TabItem>

@@ -1,0 +1,57 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# RequestAnim
+
+This function load the animation dict.
+
+```typescript
+NX.Misc.RequestAnim(dict, cb)
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript">
+
+```typescript
+const NX = exports.NX.useClient()
+
+NX.Misc.RequestAnim('dict', () => {
+  //
+})
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const NX = exports.NX.useClient()
+
+NX.Misc.RequestAnim('dict', () => {
+  //
+})
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua
+local NX = exports['NX']:useClient()
+
+NX.Misc.RequestAnim('dict', function ()
+    --
+end)
+```
+
+</TabItem>
+</Tabs>
+
+## Arguments
+
+| Argument | Data Type | Optional | Default Value | Explanation                                                             |
+| -------- | --------- | -------- | ------------- | ----------------------------------------------------------------------- |
+| dict     | String    | No       | -             | The animation dict [see](https://alexguirre.github.io/animations-list/) |
+| cb       | Function  | No       | -             | The callback that well be executed after animation loaded               |

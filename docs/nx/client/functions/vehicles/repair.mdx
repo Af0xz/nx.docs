@@ -1,0 +1,49 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# Create
+
+This function well repair the vehicle provided or the vehicle ped is in.
+
+```typescript
+NX.Vehicles.Repair(vehicle)
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript">
+
+```typescript
+const NX = exports.NX.useClient()
+
+NX.Vehicles.Repair(vehicle)
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const NX = exports.NX.useClient()
+
+NX.Vehicles.Repair(vehicle)
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua
+NX.Vehicles.Repair(vehicle)
+
+```
+
+</TabItem>
+</Tabs>
+
+## Arguments
+
+| Argument | Data Type | Optional | Default Value    | Explanation           |
+| -------- | --------- | -------- | ---------------- | --------------------- |
+| vehicle  | Number    | Yes      | `VehiclePedIsIn` | The vehicle to repair |

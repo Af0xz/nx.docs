@@ -1,0 +1,56 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# GetAll
+
+This function well return the sources of all connected players.
+
+```typescript
+NX.Players.GetAll()
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript">
+
+```typescript
+const NX = exports.NX.useServer()
+
+const nxPlayers = NX.Players.GetAll()
+
+for (const nxPlayer of nxPlayers) {
+  nxPlayer.AddItem('bread', 1)
+}
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const NX = exports.NX.useServer()
+
+const nxPlayers = NX.Players.GetAll()
+
+for (const nxPlayer of nxPlayers) {
+  nxPlayer.AddItem('bread', 1)
+}
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua
+const NX = exports.NX.useServer()
+
+const nxPlayers = NX.Players.GetAll()
+
+for(const nxPlayer of nxPlayers) {
+    nxPlayer.AddItem('bread', 1)
+}
+```
+
+</TabItem>
+</Tabs>

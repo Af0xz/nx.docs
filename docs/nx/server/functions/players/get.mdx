@@ -1,0 +1,56 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# Get
+
+This function well create a new vehicle and return it in the cb.
+
+```typescript
+NX.Players.Get(source)
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript">
+
+```typescript
+const NX = exports.NX.useServer()
+
+const nxPlayer = NX.Players.Get(1)
+
+nxPlayer.AddItem('bread', 3)
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const NX = exports.NX.useServer()
+
+const nxPlayer = NX.Players.Get(1)
+
+nxPlayer.AddItem('bread', 3)
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua
+local NX = exports['NX']:useServer()
+
+local nxPlayer = NX.Players.Get(1)
+
+nxPlayer.AddItem('bread', 3)
+```
+
+</TabItem>
+</Tabs>
+
+## Arguments
+
+| Argument | Data Type | Optional | Default Value | Explanation       |
+| -------- | --------- | -------- | ------------- | ----------------- |
+| sourcze  | String    | No       | -             | The player source |

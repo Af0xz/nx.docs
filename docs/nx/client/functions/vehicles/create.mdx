@@ -1,0 +1,53 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# Create
+
+This function well create a new vehicle and return it in the cb.
+
+```typescript
+NX.Vehicles.Create(model, cb, ...args)
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript">
+
+```typescript
+const NX = exports.NX.useClient()
+
+NX.Vehicles.Create('t20', (vehicle) => {
+  //
+})
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+NX.Vehicles.Create('t20', () => {
+  //
+})
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua
+NX.Vehicles.Create('t20', function()
+    --
+end)
+```
+
+</TabItem>
+</Tabs>
+
+## Arguments
+
+| Argument | Data Type | Optional | Default Value | Explanation                                                            |
+| -------- | --------- | -------- | ------------- | ---------------------------------------------------------------------- |
+| model    | String    | No       | -             | The vehicle model [see](https://wiki.rage.mp/index.php?title=Vehicles) |
+| cb       | Function  | Yes      | -             | The callback that well be executed after vehicle spawned               |

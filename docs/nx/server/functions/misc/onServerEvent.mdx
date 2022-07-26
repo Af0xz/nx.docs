@@ -1,0 +1,64 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# OnServerEvent
+
+This function well create a new vehicle and return it in the cb.
+
+```typescript
+NX.Misc.OnServerEvent(eventName, cb)
+```
+
+---
+
+:::caution
+**last callback** argument is always the callback
+:::
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript">
+
+```typescript
+const NX = exports.NX.useServer()
+
+NX.Misc.OnServerEvent('NX::helloWorld', (arg1, cb) => {
+  console.log(arg1)
+  cb('NX::helloWorld')
+})
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const NX = exports.NX.useServer()
+
+NX.Misc.OnServerEvent('NX::helloWorld', (arg1, cb) => {
+  console.log(arg1)
+  cb('NX::helloWorld')
+})
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua
+local NX = exports['NX']:useServer()
+
+NX.Misc.OnServerEvent("NX::helloWorld", function()
+    print(arg1)
+    cb('NX::helloWorld')
+end)
+```
+
+</TabItem>
+</Tabs>
+
+## Arguments
+
+| Argument  | Data Type | Optional | Default Value | Explanation                                                  |
+| --------- | --------- | -------- | ------------- | ------------------------------------------------------------ |
+| eventName | String    | No       | -             | The event name to listen to                                  |
+| cb        | Function  | No       | -             | The callback that well be executed after receiving the event |

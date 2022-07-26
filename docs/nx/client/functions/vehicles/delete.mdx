@@ -1,0 +1,54 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# Create
+
+This function well delete the vehicle ped is in.
+
+```typescript
+NX.Vehicles.Delete(cb)
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript">
+
+```typescript
+const NX = exports.NX.useClient()
+
+NX.Vehicles.Delete(() => {
+  //
+})
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const NX = exports.NX.useClient()
+
+NX.Vehicles.Delete(() => {
+  //
+})
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua
+NX.Vehicles.Delete(function()
+    --
+end)
+```
+
+</TabItem>
+</Tabs>
+
+## Arguments
+
+| Argument | Data Type | Optional | Default Value | Explanation                                              |
+| -------- | --------- | -------- | ------------- | -------------------------------------------------------- |
+| cb       | Function  | Yes      | -             | The callback that well be executed after vehicle deleted |

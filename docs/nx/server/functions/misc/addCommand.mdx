@@ -1,0 +1,66 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# AddCommand
+
+This function well create a new vehicle and return it in the cb.
+
+```typescript
+NX.Misc.AddCommand(name, cb, authPermissions)
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript">
+
+```typescript
+const NX = exports.NX.useServer()
+
+NX.Misc.AddCommand(
+  'kill',
+  (source, args) => {
+    //
+  },
+  ['admin']
+)
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const NX = exports.NX.useServer()
+
+NX.Misc.AddCommand(
+  'kill',
+  (source, args) => {
+    //
+  },
+  ['admin']
+)
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua
+local NX = exports['NX']:useServer()
+
+NX.Misc.AddCommand('nx', function (source, args)
+    --
+end, {"admin"})
+```
+
+</TabItem>
+</Tabs>
+
+## Arguments
+
+| Argument        | Data Type | Optional | Default Value | Explanation                                                |
+| --------------- | --------- | -------- | ------------- | ---------------------------------------------------------- |
+| name            | String    | No       | -             | The command name                                           |
+| cb              | Function  | No       | -             | The callback that well be executed after command execution |
+| authPermissions | Array     | yes      | ['user']      | The required permissions to execute the command.           |

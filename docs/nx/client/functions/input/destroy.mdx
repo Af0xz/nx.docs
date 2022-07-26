@@ -1,9 +1,17 @@
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
 
 # Destroy
 
 This function well destroy the actual input menu.
+
+```typescript
+NX.Input.Destroy(cb)
+```
+
+---
+
+## Example
 
 <Tabs>
 <TabItem value="ts" label="TypeScript">
@@ -12,9 +20,9 @@ This function well destroy the actual input menu.
 const NX = exports.NX.useClient()
 
 NX.Input.Destroy((res: RespT) => {
-    if(res.status === 'succes') {
-        console.log('Destroyed !')
-    }
+  if (res.status === 'succes') {
+    console.log('Destroyed !')
+  }
 })
 
 interface RespT {
@@ -31,9 +39,9 @@ interface RespT {
 const NX = exports.NX.useClient()
 
 NX.Input.Destroy((res) => {
-    if(res.status === 'succes') {
-        console.log('Destroyed !')
-    }
+  if (res.status === 'succes') {
+    console.log('Destroyed !')
+  }
 })
 ```
 

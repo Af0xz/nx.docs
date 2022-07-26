@@ -32,7 +32,7 @@ module.exports = {
                   id: 'nx/client/functions/input/isActive',
                   label: 'IsActive',
                 },
-              ]
+              ],
             },
             {
               type: 'category',
@@ -58,7 +58,7 @@ module.exports = {
                   id: 'nx/client/functions/misc/requestAnim',
                   label: 'RequestAnim',
                 },
-              ]
+              ],
             },
             {
               type: 'category',
@@ -74,7 +74,7 @@ module.exports = {
                   id: 'nx/client/functions/objects/delete',
                   label: 'Delete',
                 },
-              ]
+              ],
             },
             {
               type: 'category',
@@ -95,7 +95,7 @@ module.exports = {
                   id: 'nx/client/functions/player/setPlayerData',
                   label: 'SetPlayerData',
                 },
-              ]
+              ],
             },
             {
               type: 'category',
@@ -121,11 +121,65 @@ module.exports = {
                   id: 'nx/client/functions/vehicles/repair',
                   label: 'Repair',
                 },
-              ]
+              ],
             },
-          ]
-        }
+          ],
+        },
       ],
-    }
+    },
+    {
+      type: 'category',
+      label: 'Server',
+      items: [
+        {
+          type: 'category',
+          label: 'Players',
+          items: [
+            {
+              type: 'doc',
+              id: 'nx/server/functions/players/get',
+              label: 'Get',
+            },
+            {
+              type: 'doc',
+              id: 'nx/server/functions/players/getAll',
+              label: 'GetAll',
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Misc',
+          items: [
+            {
+              type: 'doc',
+              id: 'nx/server/functions/misc/addCommand',
+              label: 'AddCommand',
+            },
+            {
+              type: 'doc',
+              id: 'nx/server/functions/misc/onServerEvent',
+              label: 'OnServerEvent',
+            },
+            {
+              type: 'doc',
+              id: 'nx/server/functions/misc/registerUsableItem',
+              label: 'RegisterUsableItem',
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Discord',
+          items: [
+            {
+              type: 'doc',
+              id: 'nx/server/functions/discord/sendWebhook',
+              label: 'SendWebhook',
+            },
+          ],
+        },
+      ],
+    },
   ],
-};
+}

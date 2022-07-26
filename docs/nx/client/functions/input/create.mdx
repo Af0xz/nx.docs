@@ -1,32 +1,48 @@
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
 
 # Create
 
 This function well create an input menu.
 
+```typescript
+NX.Input.Create(data, cb)
+```
+
+---
+
+## Example
+
+:::caution
+
+**ID** most be **unique**.
+
+:::
+
 <Tabs>
 <TabItem value="ts" label="TypeScript">
 
-```typescript
+```typescript title="/rc/client/input/input.service.ts"
 const NX = exports.NX.useClient()
 
-NX.Input.Create({
+NX.Input.Create(
+  {
     title: 'title',
     rows: [
-        {
-            label: 'Input 1',
-            id: 'input1'
-        },
-        {
-            label: 'Input 2',
-            id: 'input2'
-        },
-    ]
-}, (res: RespT) => {
-    // 
-})
-
+      {
+        label: 'Input 1',
+        id: 'input1',
+      },
+      {
+        label: 'Input 2',
+        id: 'input2',
+      },
+    ],
+  },
+  (res: RespT) => {
+    //
+  }
+)
 
 interface RespT {
   status: 'succes' | 'error'
@@ -38,34 +54,37 @@ interface RespT {
 </TabItem>
 <TabItem value="js" label="JavaScript">
 
-```js
+```js title="/rc/client/input/input.service.ts"
 const NX = exports.NX.useClient()
 
-NX.Input.Create({
+NX.Input.Create(
+  {
     title: 'title',
     rows: [
-        {
-            label: 'Input 1',
-            id: 'input1'
-        },
-        {
-            label: 'Input 2',
-            id: 'input2'
-        },
-    ]
-}, (res) => {
-    // 
-})
+      {
+        label: 'Input 1',
+        id: 'input1',
+      },
+      {
+        label: 'Input 2',
+        id: 'input2',
+      },
+    ],
+  },
+  (res) => {
+    //
+  }
+)
 ```
 
 </TabItem>
 <TabItem value="lua" label="Lua">
 
-```lua
+```lua title="/rc/client/input/input.service.ts"
 local NX = exports['NX']:useClient()
 
 NX.Input.Create({
-    title = "title", 
+    title = "title",
     rows = {
         {
             label = 'Input 1',
@@ -83,3 +102,26 @@ end)
 
 </TabItem>
 </Tabs>
+
+---
+
+## Arguments
+
+| Argument | Data Type | Optional | Default Value | Explanation       |
+| -------- | --------- | -------- | ------------- | ----------------- |
+| Data     | Object    | No       | -             | The configuration |
+| Callback | Function  | No       | -             | Message subject   |
+
+#### Data
+
+| Argument | Data Type | Optional | Default Value | Explanation              |
+| -------- | --------- | -------- | ------------- | ------------------------ |
+| title    | String    | No       | `title`       | The title of the menu.   |
+| rows     | Array     | No       | -             | The array of the inputs. |
+
+#### Input
+
+| Argument | Data Type | Optional | Default Value | Explanation                       |
+| -------- | --------- | -------- | ------------- | --------------------------------- |
+| label    | String    | No       | -             | The label of the input.           |
+| id       | String    | No       | -             | The id of input `MOST BE UNIQUE`. |

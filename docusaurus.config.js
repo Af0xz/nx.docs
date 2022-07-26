@@ -1,13 +1,12 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-
+const lightCodeTheme = require('prism-react-renderer/themes/github')
+const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'NX',
-  tagline: 'Dinosaurs are cool',
+  tagline: '[NX] is a FiveM Framework, created by niiyy.',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -41,8 +40,6 @@ const config = {
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
@@ -60,17 +57,17 @@ const config = {
         logo: {
           alt: 'logo',
           src: 'img/logo.png',
-          width: "90px",
+          width: '90px',
         },
         items: [
           {
             type: 'doc',
             docId: 'nx/nx',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Documentation',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/niiyy/NX',
             label: 'GitHub',
             position: 'right',
           },
@@ -78,6 +75,12 @@ const config = {
             href: 'https://discord.gg/d6pRBjBUyn',
             label: 'Discord',
             position: 'right',
+          },
+          {
+            href: 'https://twitter.com/nniiiiyy',
+            position: 'right',
+            className: 'header-twitter-link',
+            'aria-label': 'Twitter',
           },
         ],
       },
@@ -102,7 +105,7 @@ const config = {
               {
                 label: 'Twitter',
                 href: 'https://twitter.com/nniiiiyy',
-              }
+              },
             ],
           },
         ],
@@ -110,9 +113,9 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['lua']
+        additionalLanguages: ['lua'],
       },
     }),
-};
+}
 
-module.exports = config;
+module.exports = config
