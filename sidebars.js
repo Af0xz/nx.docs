@@ -11,6 +11,22 @@ module.exports = {
       items: [
         {
           type: 'category',
+          label: 'Events',
+          items: [
+            {
+              type: 'doc',
+              id: 'nx/client/events/items',
+              label: 'Items',
+            },
+            {
+              type: 'doc',
+              id: 'nx/client/events/misc',
+              label: 'Misc',
+            },
+          ],
+        },
+        {
+          type: 'category',
           label: 'Functions',
           items: [
             {
@@ -90,11 +106,6 @@ module.exports = {
                   id: 'nx/client/functions/player/hasLoaded',
                   label: 'HasLoaded',
                 },
-                {
-                  type: 'doc',
-                  id: 'nx/client/functions/player/setPlayerData',
-                  label: 'SetPlayerData',
-                },
               ],
             },
             {
@@ -131,6 +142,22 @@ module.exports = {
       type: 'category',
       label: 'Server',
       items: [
+        {
+          type: 'category',
+          label: 'Events',
+          items: [
+            {
+              type: 'doc',
+              id: 'nx/server/events/items',
+              label: 'Items',
+            },
+            {
+              type: 'doc',
+              id: 'nx/server/events/misc',
+              label: 'Misc',
+            },
+          ],
+        },
         {
           type: 'category',
           label: 'Players',

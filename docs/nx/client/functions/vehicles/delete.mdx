@@ -16,7 +16,7 @@ NX.Vehicles.Delete(cb)
 <Tabs>
 <TabItem value="ts" label="TypeScript">
 
-```typescript
+```typescript title="/rc/client/class/vehicle.ts"
 const NX = exports.NX.useClient()
 
 NX.Vehicles.Delete(() => {
@@ -27,7 +27,7 @@ NX.Vehicles.Delete(() => {
 </TabItem>
 <TabItem value="js" label="JavaScript">
 
-```js
+```js title="/rc/client/class/vehicle.ts"
 const NX = exports.NX.useClient()
 
 NX.Vehicles.Delete(() => {
@@ -38,7 +38,9 @@ NX.Vehicles.Delete(() => {
 </TabItem>
 <TabItem value="lua" label="Lua">
 
-```lua
+```lua title="/rc/client/class/vehicle.ts"
+local NX = exports['NX']:useClient()
+
 NX.Vehicles.Delete(function()
     --
 end)

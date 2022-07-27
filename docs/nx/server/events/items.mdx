@@ -1,0 +1,30 @@
+# Items Events
+
+## NX::createItem
+
+```typescript
+emitNet(
+  'NX::createItem',
+  {
+    label: 'LABEL',
+    name: 'bread',
+    weight: 12,
+    props: 'qzdqzdqzd',
+    type: 'normal',
+  },
+  function (res) {
+    console.log(res)
+  }
+)
+```
+
+---
+
+## NX::itemCreated
+
+```typescript
+on('NX::itemCreated', {
+  status: 'thirst',
+  amount: 3,
+})
+```

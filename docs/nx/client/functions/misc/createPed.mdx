@@ -16,7 +16,7 @@ NX.Misc.CreatePed(pedType, model, cb)
 <Tabs>
 <TabItem value="ts" label="TypeScript">
 
-```typescript
+```typescript title="/rc/client/class/misc.ts"
 const NX = exports.NX.useClient()
 
 NX.Misc.CreatePed(1, 'a_f_m_beach_01', (resp: RespT) => {
@@ -33,7 +33,7 @@ interface RespT {
 </TabItem>
 <TabItem value="js" label="JavaScript">
 
-```js
+```js title="/rc/client/class/misc.ts"
 const NX = exports.NX.useClient()
 
 NX.Misc.CreatePed(1, 'a_f_m_beach_01', (resp) => {
@@ -44,7 +44,7 @@ NX.Misc.CreatePed(1, 'a_f_m_beach_01', (resp) => {
 </TabItem>
 <TabItem value="lua" label="Lua">
 
-```lua
+```lua title="/rc/client/class/misc.ts"
 local NX = exports['NX']:useClient()
 
 NX.Misc.CreatePed(1, 'a_f_m_beach_01', function (resp)

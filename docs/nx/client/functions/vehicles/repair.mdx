@@ -16,7 +16,7 @@ NX.Vehicles.Repair(vehicle)
 <Tabs>
 <TabItem value="ts" label="TypeScript">
 
-```typescript
+```typescript title="/rc/client/class/vehicle.ts"
 const NX = exports.NX.useClient()
 
 NX.Vehicles.Repair(vehicle)
@@ -25,7 +25,7 @@ NX.Vehicles.Repair(vehicle)
 </TabItem>
 <TabItem value="js" label="JavaScript">
 
-```js
+```js title="/rc/client/class/vehicle.ts"
 const NX = exports.NX.useClient()
 
 NX.Vehicles.Repair(vehicle)
@@ -34,9 +34,10 @@ NX.Vehicles.Repair(vehicle)
 </TabItem>
 <TabItem value="lua" label="Lua">
 
-```lua
-NX.Vehicles.Repair(vehicle)
+```lua title="/rc/client/class/vehicle.ts"
+local NX = exports['NX']:useClient()
 
+NX.Vehicles.Repair(vehicle)
 ```
 
 </TabItem>

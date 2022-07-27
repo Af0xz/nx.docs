@@ -1,0 +1,65 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# Create
+
+This function well delete the object.
+
+```typescript
+NX.Objects.Delete(entity, cb)
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript">
+
+```typescript title="/rc/client/class/object.ts"
+const NX = exports.NX.useClient()
+
+NX.Objects.Delete(16381, (resp: RespT) => {
+  //
+})
+
+interface RespT {
+  status: 'succes' | 'error'
+  message?: any
+  data?: any
+}
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js title="/rc/client/class/object.ts"
+const NX = exports.NX.useClient()
+
+NX.Objects.Delete(16381, (resp) => {
+  //
+})
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua title="/rc/client/class/object.ts"
+local NX = exports['NX']:useClient()
+
+NX.Objects.Delete(16381, function(resp) {
+    --
+})
+```
+
+</TabItem>
+</Tabs>
+
+---
+
+## Arguments
+
+| Argument | Data Type | Optional | Default Value | Explanation                                                 |
+| -------- | --------- | -------- | ------------- | ----------------------------------------------------------- |
+| entity   | Number    | No       | -             | The object ID                                               |
+| cb       | Function  | Yes      | -             | The callback that well be executed after object has deleted |

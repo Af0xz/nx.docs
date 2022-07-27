@@ -16,13 +16,11 @@ NX.Input.Destroy(cb)
 <Tabs>
 <TabItem value="ts" label="TypeScript">
 
-```typescript
+```typescript title="/rc/client/input/input.service.ts"
 const NX = exports.NX.useClient()
 
 NX.Input.Destroy((res: RespT) => {
-  if (res.status === 'succes') {
-    console.log('Destroyed !')
-  }
+  //
 })
 
 interface RespT {
@@ -35,26 +33,22 @@ interface RespT {
 </TabItem>
 <TabItem value="js" label="JavaScript">
 
-```js
+```js title="/rc/client/input/input.service.ts"
 const NX = exports.NX.useClient()
 
 NX.Input.Destroy((res) => {
-  if (res.status === 'succes') {
-    console.log('Destroyed !')
-  }
+  //
 })
 ```
 
 </TabItem>
 <TabItem value="lua" label="Lua">
 
-```lua
+```lua title="/rc/client/input/input.service.ts"
 local NX = exports['NX']:useClient()
 
 NX.Input.Destroy(function (res)
-    if(res.status == 'succes') then
-        print('Destroyed !')
-    end
+  --
 end)
 ```
 

@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem'
 
 # RegisterUsableItem
 
-This function well create a new vehicle and return it in the cb.
+This function well register a new usable item.
 
 ```typescript
 NX.Misc.RegisterUsableItem(name, cb)
@@ -16,7 +16,7 @@ NX.Misc.RegisterUsableItem(name, cb)
 <Tabs>
 <TabItem value="ts" label="TypeScript">
 
-```typescript
+```typescript title="/rc/server/items/items.service.ts"
 const NX = exports.NX.useServer()
 
 NX.Misc.RegisterUsableItem('bread', (source) => {
@@ -32,7 +32,7 @@ NX.Misc.RegisterUsableItem('bread', (source) => {
 </TabItem>
 <TabItem value="js" label="JavaScript">
 
-```js
+```js title="/rc/server/items/items.service.ts"
 const NX = exports.NX.useServer()
 
 NX.Misc.RegisterUsableItem('bread', (source) => {
@@ -48,7 +48,7 @@ NX.Misc.RegisterUsableItem('bread', (source) => {
 </TabItem>
 <TabItem value="lua" label="Lua">
 
-```lua
+```lua title="/rc/server/items/items.service.ts"
 local NX = exports['NX']:useServer()
 
 NX.Misc.RegisterUsableItem('bread', function()

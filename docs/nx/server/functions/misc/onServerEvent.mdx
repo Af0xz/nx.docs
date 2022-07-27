@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem'
 
 # OnServerEvent
 
-This function well create a new vehicle and return it in the cb.
+This function well listen for server side events.
 
 ```typescript
 NX.Misc.OnServerEvent(eventName, cb)
@@ -20,7 +20,7 @@ NX.Misc.OnServerEvent(eventName, cb)
 <Tabs>
 <TabItem value="ts" label="TypeScript">
 
-```typescript
+```typescript title="/rc/server/events/index.ts"
 const NX = exports.NX.useServer()
 
 NX.Misc.OnServerEvent('NX::helloWorld', (arg1, cb) => {
@@ -32,7 +32,7 @@ NX.Misc.OnServerEvent('NX::helloWorld', (arg1, cb) => {
 </TabItem>
 <TabItem value="js" label="JavaScript">
 
-```js
+```js title="/rc/server/events/index.ts"
 const NX = exports.NX.useServer()
 
 NX.Misc.OnServerEvent('NX::helloWorld', (arg1, cb) => {
@@ -44,7 +44,7 @@ NX.Misc.OnServerEvent('NX::helloWorld', (arg1, cb) => {
 </TabItem>
 <TabItem value="lua" label="Lua">
 
-```lua
+```lua title="/rc/server/events/index.ts"
 local NX = exports['NX']:useServer()
 
 NX.Misc.OnServerEvent("NX::helloWorld", function()

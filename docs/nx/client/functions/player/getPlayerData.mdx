@@ -1,12 +1,12 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
-# IsActive
+# GetPlayerData
 
-This function well return a boolean.
+This function well return the player data.
 
 ```typescript
-NX.Input.IsActive()
+NX.Player.GetPlayerData()
 ```
 
 ---
@@ -16,34 +16,28 @@ NX.Input.IsActive()
 <Tabs>
 <TabItem value="ts" label="TypeScript">
 
-```typescript title="/rc/client/input/input.service.ts"
+```typescript title="/rc/client/player/player.class.ts"
 const NX = exports.NX.useClient()
 
-if (NX.Input.IsActive()) {
-  //
-}
+NX.Player.GetPlayerData()
 ```
 
 </TabItem>
 <TabItem value="js" label="JavaScript">
 
-```js title="/rc/client/input/input.service.ts"
+```js title="/rc/client/player/player.class.ts"
 const NX = exports.NX.useClient()
 
-if (NX.Input.IsActive()) {
-  //
-}
+NX.Player.GetPlayerData()
 ```
 
 </TabItem>
 <TabItem value="lua" label="Lua">
 
-```lua title="/rc/client/input/input.service.ts"
+```lua title="/rc/client/player/player.class.ts"
 local NX = exports['NX']:useClient()
 
-if(NX.Input.IsActive()) then
-  --
-end
+NX.Player.GetPlayerData()
 ```
 
 </TabItem>

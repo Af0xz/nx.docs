@@ -16,7 +16,7 @@ NX.Vehicles.Create(model, cb, ...args)
 <Tabs>
 <TabItem value="ts" label="TypeScript">
 
-```typescript
+```typescript title="/rc/client/class/vehicle.ts"
 const NX = exports.NX.useClient()
 
 NX.Vehicles.Create('t20', (vehicle) => {
@@ -27,7 +27,9 @@ NX.Vehicles.Create('t20', (vehicle) => {
 </TabItem>
 <TabItem value="js" label="JavaScript">
 
-```js
+```js title="/rc/client/class/vehicle.ts"
+const NX = exports.NX.useClient()
+
 NX.Vehicles.Create('t20', () => {
   //
 })
@@ -36,7 +38,9 @@ NX.Vehicles.Create('t20', () => {
 </TabItem>
 <TabItem value="lua" label="Lua">
 
-```lua
+```lua title="/rc/client/class/vehicle.ts"
+local NX = exports['NX']:useClient()
+
 NX.Vehicles.Create('t20', function()
     --
 end)

@@ -1,0 +1,65 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# Create
+
+This function well create a new object.
+
+```typescript
+NX.Objects.Create(entity, cb)
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript">
+
+```typescript title="/rc/client/class/object.ts"
+const NX = exports.NX.useClient()
+
+NX.Objects.Create('prop_logpile_06b', (resp: RespT) => {
+  //
+})
+
+interface RespT {
+  status: 'succes' | 'error'
+  message?: any
+  data?: any
+}
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js title="/rc/client/class/object.ts"
+const NX = exports.NX.useClient()
+
+NX.Objects.Create('prop_logpile_06b', (resp: RespT) => {
+  //
+})
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua title="/rc/client/class/object.ts"
+local NX = exports['NX']:useClient()
+
+NX.Objects.Create('prop_logpile_06b', function(resp) {
+    --
+})
+```
+
+</TabItem>
+</Tabs>
+
+---
+
+## Arguments
+
+| Argument | Data Type | Optional | Default Value | Explanation                                                 |
+| -------- | --------- | -------- | ------------- | ----------------------------------------------------------- |
+| entity   | String    | No       | -             | The object model [see](https://gtahash.ru/)                 |
+| cb       | Function  | Yes      | -             | The callback that well be executed after object has created |
