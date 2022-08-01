@@ -11,7 +11,6 @@ import styles from './index.module.css'
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext()
   return (
-    // <header className={clsx('hero hero--primary', styles.heroBanner)}>
     <header className={clsx(styles.heroBanner)}>
       <div className="container main-top-container">
         <div className={styles.textContainer}>
@@ -28,10 +27,10 @@ function HomepageHeader() {
             Documentation Website of{' '}
             <span className={styles.specialColor}>NX</span> Framework
           </p>
-          <div className={styles.buttons}>
+          <div className={styles.buttonsMain}>
             <Link
               className={clsx(
-                'button button--primary button--lg',
+                'button button--primary button--lg button-main',
                 styles.getStarted
               )}
               to={'docs/nx'}
@@ -40,7 +39,7 @@ function HomepageHeader() {
             </Link>
             <Link
               className={clsx(
-                'button button--primary button--lg',
+                'button button--primary button--lg button-main',
                 styles.download
               )}
               to={'https://github.com/niiyy/NX/releases'}

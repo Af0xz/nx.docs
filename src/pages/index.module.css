@@ -31,6 +31,13 @@
   width: 100%;
 }
 
+.buttonsMain {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
 .githubStars {
   display: flex;
   margin-top: 20px;
@@ -52,5 +59,12 @@
   }
   .textContainer {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .buttonsMain {
+    flex-direction: column;
+    height: 150px;
   }
 }
