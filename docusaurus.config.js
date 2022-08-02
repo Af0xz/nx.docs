@@ -6,14 +6,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'NX',
-  tagline: '[NX] is a FiveM Framework, created by niiyy.',
+  tagline:
+    '[NX] is a modern FiveM Framework based on modern technologies such as TypeScript, React and more...',
   url: 'https://nxf.netlify.app/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'NX', // Usually your GitHub org/user name.
-  projectName: 'NX', // Usually your repo name.
+  organizationName: 'niiyy',
+  projectName: 'NX',
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -46,6 +47,14 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [
+        { name: 'keywords', content: 'fivem, framework, gta, nx' },
+        {
+          name: 'description',
+          content:
+            '[NX] is a modern FiveM Framework based on modern technologies such as TypeScript, React and more...',
+        },
+      ],
       navbar: {
         logo: {
           alt: 'logo',
