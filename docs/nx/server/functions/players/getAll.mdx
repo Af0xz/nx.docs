@@ -14,22 +14,9 @@ NX.Players.GetAll()
 ## Example
 
 <Tabs>
-<TabItem value="ts" label="TypeScript">
+<TabItem value="ts" label="TypeScript/JavaScript">
 
 ```typescript title="/rc/server/player/player.service.ts"
-const NX = exports.NX.useServer()
-
-const nxPlayers = NX.Players.GetAll()
-
-for (const nxPlayer of nxPlayers) {
-  nxPlayer.AddItem('bread', 1)
-}
-```
-
-</TabItem>
-<TabItem value="js" label="JavaScript">
-
-```js title="/rc/server/player/player.service.ts"
 const NX = exports.NX.useServer()
 
 const nxPlayers = NX.Players.GetAll()
