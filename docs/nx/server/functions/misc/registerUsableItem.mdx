@@ -14,25 +14,9 @@ NX.Misc.RegisterUsableItem(name, cb)
 ## Example
 
 <Tabs>
-<TabItem value="ts" label="TypeScript">
+<TabItem value="ts" label="TypeScript/JavaScript">
 
 ```typescript title="/rc/server/items/items.service.ts"
-const NX = exports.NX.useServer()
-
-NX.Misc.RegisterUsableItem('bread', (source) => {
-  const naPlayer = NX.Players.Get(source)
-  const item = naPlayer.HasItem('bread')
-
-  if (item) {
-    naPlayer.RemoveItem('bread', 1)
-  }
-})
-```
-
-</TabItem>
-<TabItem value="js" label="JavaScript">
-
-```js title="/rc/server/items/items.service.ts"
 const NX = exports.NX.useServer()
 
 NX.Misc.RegisterUsableItem('bread', (source) => {
