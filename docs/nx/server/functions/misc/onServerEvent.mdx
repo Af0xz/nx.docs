@@ -18,21 +18,9 @@ NX.Misc.OnServerEvent(eventName, cb)
 ## Example
 
 <Tabs>
-<TabItem value="ts" label="TypeScript">
+<TabItem value="ts" label="TypeScript/JavaScript">
 
 ```typescript title="/rc/server/events/index.ts"
-const NX = exports.NX.useServer()
-
-NX.Misc.OnServerEvent('NX::helloWorld', (arg1, cb) => {
-  console.log(arg1)
-  cb('NX::helloWorld')
-})
-```
-
-</TabItem>
-<TabItem value="js" label="JavaScript">
-
-```js title="/rc/server/events/index.ts"
 const NX = exports.NX.useServer()
 
 NX.Misc.OnServerEvent('NX::helloWorld', (arg1, cb) => {

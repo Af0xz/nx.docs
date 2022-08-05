@@ -14,24 +14,9 @@ NX.Misc.AddCommand(name, cb, authPermissions)
 ## Example
 
 <Tabs>
-<TabItem value="ts" label="TypeScript">
+<TabItem value="ts" label="TypeScript/JavaScript">
 
 ```typescript title="/rc/server/commands/commands.servcice.ts"
-const NX = exports.NX.useServer()
-
-NX.Misc.AddCommand(
-  'kill',
-  (source, args) => {
-    //
-  },
-  ['admin']
-)
-```
-
-</TabItem>
-<TabItem value="js" label="JavaScript">
-
-```js title="/rc/server/commands/commands.servcice.ts"
 const NX = exports.NX.useServer()
 
 NX.Misc.AddCommand(
