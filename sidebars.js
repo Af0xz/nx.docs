@@ -6,6 +6,11 @@ module.exports = {
       label: 'Installation',
     },
     {
+      type: 'doc',
+      id: 'nx/dev/dev',
+      label: 'Developpement',
+    },
+    {
       type: 'category',
       label: 'Client',
       items: [
