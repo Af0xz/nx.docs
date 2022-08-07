@@ -27,15 +27,11 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/niiyy/nx.docs/tree/main/',
         },
         blog: {
           showReadingTime: true,
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/niiyy/nx.docs/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -55,7 +51,15 @@ const config = {
             '[NX] is a modern FiveM Framework based on modern technologies such as TypeScript, React and more...',
         },
       ],
+      announcementBar: {
+        id: 'join_us_discord',
+        content:
+          '⭐️ Join us on <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/d6pRBjBUyn">Discord</a>.',
+        backgroundColor: '#fafbfc',
+        textColor: '#091E42',
+      },
       navbar: {
+        style: 'dark',
         logo: {
           alt: 'logo',
           src: 'img/logopng.png',
@@ -66,7 +70,7 @@ const config = {
             type: 'doc',
             docId: 'nx/nx',
             position: 'left',
-            label: 'Documentation',
+            label: 'Docs',
           },
           {
             href: 'https://github.com/niiyy/NX',
@@ -80,37 +84,14 @@ const config = {
           },
           {
             href: 'https://twitter.com/nniiiiyy',
+            label: 'Twitter',
             position: 'right',
-            className: 'header-twitter-link',
-            'aria-label': 'Twitter',
           },
         ],
       },
       footer: {
         style: 'light',
-        logo: {
-          alt: 'Meta Open Source Logo',
-          src: 'img/logopng.png',
-          href: 'https://discord.gg/d6pRBjBUyn',
-          width: 160,
-          height: 51,
-        },
         copyright: `Copyright © ${new Date().getFullYear()} niiy.`,
-        links: [
-          {
-            title: 'About me',
-            items: [
-              {
-                label: 'Discord',
-                href: 'https://discord.gg/d6pRBjBUyn',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/nniiiiyy',
-              },
-            ],
-          },
-        ],
       },
       prism: {
         theme: lightCodeTheme,

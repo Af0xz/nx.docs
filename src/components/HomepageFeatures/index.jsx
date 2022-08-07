@@ -57,6 +57,7 @@ export default function HomepageFeatures() {
             <Feature key={idx} {...props} />
           ))}
         </div>
+        <hr />
       </div>
     </section>
   )
