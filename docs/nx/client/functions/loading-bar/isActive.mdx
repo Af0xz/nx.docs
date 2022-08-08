@@ -1,0 +1,50 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# IsActive
+
+This function well return a boolean.
+
+```typescript
+NX.LoadingBar.IsActive()
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript">
+
+```typescript title="/rc/client/input/input.service.ts"
+const NX = exports.NX.useClient()
+
+if (NX.LoadingBar.IsActive()) {
+  //
+}
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js title="/rc/client/input/input.service.ts"
+const NX = exports.NX.useClient()
+
+if (NX.LoadingBar.IsActive()) {
+  //
+}
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua title="/rc/client/input/input.service.ts"
+local NX = exports['NX']:useClient()
+
+if(NX.LoadingBar.IsActive()) then
+  --
+end
+```
+
+</TabItem>
+</Tabs>

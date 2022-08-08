@@ -1,0 +1,82 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# Create
+
+This function well create a loading bar.
+
+```typescript
+NX.LoadingBar.Create(data)
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript/JavaScript">
+
+```typescript title="/rc/client/loading-bar/loadingBar.service.ts"
+const NX = exports.NX.useClient()
+
+NX.LoadingBar.Create({
+  duration: 10,
+  label: 'Loading...',
+  style: {
+    container: {
+      backgroundColor: 'black',
+    },
+    bar: {
+      backgroundColor: 'white',
+    },
+    label: {
+      color: 'red',
+    },
+  },
+})
+```
+
+</TabItem>
+
+<TabItem value="lua" label="Lua">
+
+```lua title="/rc/client/input/loadingBar.service.ts"
+local NX = exports['NX']:useClient()
+
+NX.LoadingBar.Create(
+  {
+    duration = 10,
+    label = 'Loading...',
+    style = {
+        container = {
+            backgroundColor =  'black'
+        },
+                bar =  {
+            backgroundColor =  'white'
+        },
+        label =  {
+            color=  'red'
+        }
+    }
+  }
+)
+```
+
+</TabItem>
+</Tabs>
+
+---
+
+## Arguments
+
+| Argument | Data Type | Optional | Default Value | Explanation       |
+| -------- | --------- | -------- | ------------- | ----------------- |
+| Data     | Object    | Yes      | -             | The configuration |
+
+## Data Configuration
+
+| Argument | Data Type | Optional | Default Value | Explanation                                            |
+| -------- | --------- | -------- | ------------- | ------------------------------------------------------ |
+| duration | Number    | Yes      | 10            | The loading bar duration in seconds                    |
+| label    | String    | Yes      | %             | The loading label that well be displayed in the middle |
+| style    | Number    | Yes      | {}            | The loading bar style                                  |

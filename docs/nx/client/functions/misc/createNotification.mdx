@@ -1,0 +1,70 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# CreateNotification
+
+This function well create a new ped.
+
+```typescript
+NX.Misc.CreateNotification(data)
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript/JavaScript">
+
+```typescript title="/rc/client/notification/notification.service.ts"
+const NX = exports.NX.useClient()
+
+NX.Misc.CreateNotification({
+  type: 'SUCCES',
+  duration: 10,
+  body: {
+    content: 'Hello everyone.',
+  },
+})
+```
+
+</TabItem>
+
+<TabItem value="lua" label="Lua">
+
+```lua title="/rc/client/class/misc.ts"
+local NX = exports['NX']:useClient()
+
+NX.Misc.CreateNotification({
+    type = 'SUCCES',
+    duration = 10,
+    body = {
+        content = 'Hello everyone.'
+    }
+})
+```
+
+</TabItem>
+</Tabs>
+
+---
+
+## Arguments
+
+| Argument | Data Type | Optional | Default Value | Explanation       |
+| -------- | --------- | -------- | ------------- | ----------------- |
+| data     | Object    | Yes      | -             | The configuration |
+
+## Data Configuration
+
+| Argument | Data Type | Optional | Default Value | Explanation                            |
+| -------- | --------- | -------- | ------------- | -------------------------------------- | ------ | -------- | ------- |
+| type     | String    | Yes      | 'NORMAL'      | The notification type can be: 'SUCCES' | 'WARN' | 'NORMAL' | 'ERROR' |
+| duration | Number    | Yes      | 5             | The notification duration in seconds   |
+| body     | Object    | Yes      | {}            | The notification body                  |
+
+## Body Configuration
+
+| Argument | Data Type | Optional | Default Value | Explanation                                     |
+| -------- | --------- | -------- | ------------- | ----------------------------------------------- |
+| content  | String    | Yes      | 'Normal !'    | The notification content that well be displayed |
