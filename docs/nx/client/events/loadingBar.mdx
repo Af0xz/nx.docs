@@ -1,0 +1,51 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# Loading Bar
+
+## `NX::createLoadingBar`
+
+<Tabs>
+<TabItem value="ts" label="TypeScript/JavaScript">
+
+```ts
+emit('NX::createLoadingBar', {
+  duration: 10,
+  label: 'Loading...',
+  style: {
+    container: {
+      backgroundColor: 'black',
+    },
+    bar: {
+      backgroundColor: 'white',
+    },
+    label: {
+      color: 'red',
+    },
+  },
+})
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua
+TriggerEvent('NX::createLoadingBar', {
+    duration = 10,
+    label = 'Loading...',
+    style = {
+        container = {
+            backgroundColor =  'black'
+        },
+                bar =  {
+            backgroundColor =  'white'
+        },
+        label =  {
+            color=  'red'
+        }
+    }
+})
+```
+
+</TabItem>
+</Tabs>
