@@ -1,14 +1,14 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
-# GetAccounts
+# GetName
 
 :::info
-This function will return all the player accounts
+This function will return the player unique `UID`
 :::
 
 ```typescript
-nxPlayer.GetAccounts()
+nxPlayer.GetUID()
 ```
 
 ---
@@ -23,7 +23,7 @@ const NX = exports.NX.useServer()
 
 const nxPlayer = NX.Players.Get(source)
 
-console.log(JSON.stringify(nxPlayer.GetAccounts()))
+console.log(nxPlayer.GetUID())
 ```
 
 </TabItem>
@@ -34,7 +34,7 @@ local NX = exports['NX']:useServer()
 
 local nxPlayer = NX.Players.Get(source)
 
-print(json.encode(nxPlayer.GetAccounts()))
+print(nxPlayer.GetUID())
 ```
 
 </TabItem>

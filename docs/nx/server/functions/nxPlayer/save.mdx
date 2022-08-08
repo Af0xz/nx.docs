@@ -1,1 +1,41 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 # Save
+
+:::info
+This function will save the player in DB
+:::
+
+```typescript
+nxPlayer.Save()
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript/JavaScript">
+
+```typescript title="/rc/server/player/player.class.ts"
+const NX = exports.NX.useServer()
+
+const nxPlayer = NX.Players.Get(source)
+
+nxPlayer.Save()
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua title="/rc/server/player/player.class.ts"
+local NX = exports['NX']:useServer()
+
+local nxPlayer = NX.Players.Get(source)
+
+nxPlayer.Save()
+```
+
+</TabItem>
+</Tabs>

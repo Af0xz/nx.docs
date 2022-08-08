@@ -1,1 +1,39 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 # GetThirst
+
+:::info
+This function will return the player thirst
+:::
+
+```typescript
+nxPlayer.GetThirst()
+```
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript/JavaScript">
+
+```typescript title="/rc/server/player/player.class.ts"
+const NX = exports.NX.useServer()
+
+const nxPlayer = NX.Players.Get(source)
+
+console.log(nxPlayer.GetThirst())
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua title="/rc/server/player/player.class.ts"
+local NX = exports['NX']:useServer()
+
+local nxPlayer = NX.Players.Get(source)
+
+print(nxPlayer.GetThirst())
+```
+
+</TabItem>
+</Tabs>

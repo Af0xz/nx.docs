@@ -27,6 +27,11 @@ module.exports = {
                   id: 'nx/client/events/loadingBar',
                   label: 'Loading Bar',
                 },
+                {
+                  type: 'doc',
+                  id: 'nx/client/events/notification',
+                  label: 'Notification',
+                },
               ],
             },
             {
@@ -263,6 +268,11 @@ module.exports = {
                   type: 'doc',
                   id: 'nx/server/functions/nxPlayer/getIdentifier',
                   label: 'GetIdentifier',
+                },
+                {
+                  type: 'doc',
+                  id: 'nx/server/functions/nxPlayer/getUID',
+                  label: 'GetUID',
                 },
                 {
                   type: 'doc',

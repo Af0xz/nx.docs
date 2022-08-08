@@ -1,1 +1,48 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 # SetAccountMoney
+
+:::info
+This function will set account money
+:::
+
+```typescript
+nxPlayer.SetAccountMoney(account, money)
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript/JavaScript">
+
+```typescript title="/rc/server/player/player.class.ts"
+const NX = exports.NX.useServer()
+
+const nxPlayer = NX.Players.Get(source)
+
+nxPlayer.SetAccountMoney('bank', 15_000)
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua title="/rc/server/player/player.class.ts"
+local NX = exports['NX']:useServer()
+
+local nxPlayer = NX.Players.Get(source)
+
+nxPlayer.SetAccountMoney('bank', 15000)
+```
+
+</TabItem>
+</Tabs>
+
+---
+
+| Argument | Data Type | Optional | Default Value | Explanation      |
+| -------- | --------- | -------- | ------------- | ---------------- |
+| account  | String    | No       | -             | The account name |
+| money    | Number    | No       | -             | The money to set |

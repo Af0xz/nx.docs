@@ -1,1 +1,43 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 # GetBloodType
+
+:::info
+This function will return the player blood type
+:::
+
+> `'A+' | 'A-' | 'B+' | 'B-' | 'AB+' | 'AB-' | 'O+' | 'O-'`
+
+```typescript
+nxPlayer.GetBloodType()
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript/JavaScript">
+
+```typescript title="/rc/server/player/player.class.ts"
+const NX = exports.NX.useServer()
+
+const nxPlayer = NX.Players.Get(source)
+
+console.log(nxPlayer.GetBloodType())
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua title="/rc/server/player/player.class.ts"
+local NX = exports['NX']:useServer()
+
+local nxPlayer = NX.Players.Get(source)
+
+print(nxPlayer.GetBloodType())
+```
+
+</TabItem>
+</Tabs>

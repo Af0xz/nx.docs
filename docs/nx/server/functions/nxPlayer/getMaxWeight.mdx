@@ -1,1 +1,41 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 # GetMaxWeight
+
+:::info
+This function will return the player max weight
+:::
+
+```typescript
+nxPlayer.GetMaxWeight()
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript/JavaScript">
+
+```typescript title="/rc/server/player/player.class.ts"
+const NX = exports.NX.useServer()
+
+const nxPlayer = NX.Players.Get(source)
+
+console.log(nxPlayer.GetMaxWeight())
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua title="/rc/server/player/player.class.ts"
+local NX = exports['NX']:useServer()
+
+local nxPlayer = NX.Players.Get(source)
+
+print(nxPlayer.GetMaxWeight())
+```
+
+</TabItem>
+</Tabs>

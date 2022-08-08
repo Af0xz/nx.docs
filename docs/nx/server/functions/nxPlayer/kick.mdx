@@ -1,1 +1,47 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 # Kick
+
+:::info
+This function will kick the player
+:::
+
+```typescript
+nxPlayer.Kick(reason)
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript/JavaScript">
+
+```typescript title="/rc/server/player/player.class.ts"
+const NX = exports.NX.useServer()
+
+const nxPlayer = NX.Players.Get(source)
+
+nxPlayer.Kick('stupid')
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua title="/rc/server/player/player.class.ts"
+local NX = exports['NX']:useServer()
+
+local nxPlayer = NX.Players.Get(source)
+
+nxPlayer.Kick('stupid')
+```
+
+</TabItem>
+</Tabs>
+
+---
+
+| Argument | Data Type | Optional | Default Value | Explanation            |
+| -------- | --------- | -------- | ------------- | ---------------------- |
+| reason   | String    | Yes      | 'no reason'   | The reason of the kick |

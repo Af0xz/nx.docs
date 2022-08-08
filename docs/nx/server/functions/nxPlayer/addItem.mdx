@@ -1,0 +1,49 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# RemoveItem
+
+:::info
+This function will add the item to the player
+:::
+
+```typescript
+nxPlayer.AddItem(name, amount, cb?)
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript/JavaScript">
+
+```typescript title="/rc/server/player/player.class.ts"
+const NX = exports.NX.useServer()
+
+const nxPlayer = NX.Players.Get(source)
+
+nxPlayer.AddItem('bread', 2)
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua title="/rc/server/player/player.class.ts"
+local NX = exports['NX']:useServer()
+
+local nxPlayer = NX.Players.Get(source)
+
+nxPlayer.AddItem('bread', 2)
+```
+
+</TabItem>
+</Tabs>
+
+---
+
+| Argument | Data Type | Optional | Default Value | Explanation                                         |
+| -------- | --------- | -------- | ------------- | --------------------------------------------------- |
+| name     | String    | No       | -             | The item name                                       |
+| amount   | Number    | No       | -             | The item amount                                     |
+| cb       | Function  | Yes      | -             | The function that well be executed after item added |

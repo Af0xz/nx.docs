@@ -1,0 +1,35 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# Loading Bar
+
+## `NX::createNotification`
+
+<Tabs>
+<TabItem value="ts" label="TypeScript/JavaScript">
+
+```ts
+emit('NX::createNotification', {
+  type: 'SUCCES',
+  duration: 10,
+  body: {
+    content: 'Hello everyone.',
+  },
+})
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua
+TriggerEvent('NX::createNotification', {
+  type = 'SUCCES',
+  duration = 10,
+  body = {
+    content = 'Hello everyone.',
+  },
+})
+```
+
+</TabItem>
+</Tabs>

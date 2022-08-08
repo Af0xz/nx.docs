@@ -1,1 +1,47 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 # GetJob
+
+:::info
+This function will return the player job name and grade
+:::
+
+```typescript
+nxPlayer.GetJob(type)
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript/JavaScript">
+
+```typescript title="/rc/server/player/player.class.ts"
+const NX = exports.NX.useServer()
+
+const nxPlayer = NX.Players.Get(source)
+
+console.log(nxPlayer.GetJob(2))
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua title="/rc/server/player/player.class.ts"
+local NX = exports['NX']:useServer()
+
+local nxPlayer = NX.Players.Get(source)
+
+print(nxPlayer.GetJob(2))
+```
+
+</TabItem>
+</Tabs>
+
+---
+
+| Argument | Data Type | Optional | Default Value | Explanation   |
+| -------- | --------- | -------- | ------------- | ------------- |
+| type     | Number    | Yes      | 1             | The job type. |

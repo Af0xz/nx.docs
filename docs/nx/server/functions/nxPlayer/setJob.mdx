@@ -1,1 +1,50 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 # SetJob
+
+:::info
+This function will set the player job
+:::
+
+```typescript
+nxPlayer.SetJob(name, grade, type, cb?)
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript/JavaScript">
+
+```typescript title="/rc/server/player/player.class.ts"
+const NX = exports.NX.useServer()
+
+const nxPlayer = NX.Players.Get(source)
+
+nxPlayer.SetJob('police', 'officer', 1)
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua title="/rc/server/player/player.class.ts"
+local NX = exports['NX']:useServer()
+
+local nxPlayer = NX.Players.Get(source)
+
+nxPlayer.SetJob('police', 'officer', 1)
+```
+
+</TabItem>
+</Tabs>
+
+---
+
+| Argument | Data Type | Optional | Default Value | Explanation                                                  |
+| -------- | --------- | -------- | ------------- | ------------------------------------------------------------ |
+| name     | String    | No       | -             | The job name                                                 |
+| grade    | String    | No       | -             | The grade to set                                             |
+| type     | Number    | No       | -             | The job type                                                 |
+| cb       | Function  | Yes      | -             | The callback that well be executed after the SetJob finished |
