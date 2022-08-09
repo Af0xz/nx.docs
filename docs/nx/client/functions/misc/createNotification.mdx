@@ -32,7 +32,7 @@ NX.Misc.CreateNotification({
 
 <TabItem value="lua" label="Lua">
 
-```lua title="/rc/client/class/misc.ts"
+```lua title="/rc/client/notification/notification.service.ts"
 local NX = exports['NX']:useClient()
 
 NX.Misc.CreateNotification({
@@ -48,6 +48,51 @@ NX.Misc.CreateNotification({
 </Tabs>
 
 ---
+
+## Code Colors
+
+:::info
+
+> You can also include colors in your notification.
+
+In this example `Hello` will be in red
+:::
+
+### Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript/JavaScript">
+
+```typescript title="/rc/client/notification/notification.service.ts"
+const NX = exports.NX.useClient()
+
+NX.Misc.CreateNotification({
+  type: 'SUCCES',
+  duration: 10,
+  body: {
+    content: '^9Hello^0 everyone.',
+  },
+})
+```
+
+</TabItem>
+
+<TabItem value="lua" label="Lua">
+
+```lua title="/rc/client/notification/notification.service.ts"
+local NX = exports['NX']:useClient()
+
+NX.Misc.CreateNotification({
+  type = 'SUCCES',
+  duration = 10,
+  body = {
+    content = '^9Hello^0 everyone.'
+  }
+})
+```
+
+</TabItem>
+</Tabs>
 
 ## Arguments
 
@@ -68,3 +113,18 @@ NX.Misc.CreateNotification({
 | Argument | Data Type | Optional | Default Value | Explanation                                     |
 | -------- | --------- | -------- | ------------- | ----------------------------------------------- |
 | content  | String    | Yes      | 'Normal !'    | The notification content that well be displayed |
+
+## Colors
+
+```ts
+export enum CodeColors {
+  CLOSE = 0,
+  DARK_RED = '^1',
+  GREEN = '^2',
+  ORANGE = '^3',
+  BLUE = '^4',
+  PURPLE = '^6',
+  WHITE = '^7',
+  RED = '^9',
+}
+```
