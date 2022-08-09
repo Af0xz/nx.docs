@@ -128,8 +128,13 @@ module.exports = {
                   items: [
                     {
                       type: 'doc',
-                      id: 'nx/client/functions/player/getPlayerData',
-                      label: 'GetPlayerData',
+                      id: 'nx/client/functions/player/getData',
+                      label: 'GetData',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/client/functions/player/getValue',
+                      label: 'GetValue',
                     },
                     {
                       type: 'doc',

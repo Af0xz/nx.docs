@@ -1,12 +1,12 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
-# GetPlayerData
+# GetData
 
 This function well return the player data.
 
 ```typescript
-NX.Player.GetPlayerData()
+NX.Player.GetData()
 ```
 
 ---
@@ -19,7 +19,7 @@ NX.Player.GetPlayerData()
 ```typescript title="/rc/client/player/player.class.ts"
 const NX = exports.NX.useClient()
 
-NX.Player.GetPlayerData()
+NX.Player.GetData()
 ```
 
 </TabItem>
@@ -28,7 +28,7 @@ NX.Player.GetPlayerData()
 ```js title="/rc/client/player/player.class.ts"
 const NX = exports.NX.useClient()
 
-NX.Player.GetPlayerData()
+NX.Player.GetData()
 ```
 
 </TabItem>
@@ -37,8 +37,24 @@ NX.Player.GetPlayerData()
 ```lua title="/rc/client/player/player.class.ts"
 local NX = exports['NX']:useClient()
 
-NX.Player.GetPlayerData()
+NX.Player.GetData()
 ```
 
 </TabItem>
 </Tabs>
+
+## Returns
+
+```js
+{
+  accounts,
+    position,
+    identifier,
+    inventory,
+    charinfo,
+    permissions,
+    skin,
+    uid,
+    ped
+}
+```

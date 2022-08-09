@@ -1,0 +1,50 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# GetValue
+
+This function well return the value of the property
+
+```typescript
+NX.Player.GetValue(property)
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript">
+
+```typescript title="/rc/client/player/player.class.ts"
+const NX = exports.NX.useClient()
+
+NX.Player.GetValue('uid')
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js title="/rc/client/player/player.class.ts"
+const NX = exports.NX.useClient()
+
+NX.Player.GetValue('uid')
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua title="/rc/client/player/player.class.ts"
+local NX = exports['NX']:useClient()
+
+NX.Player.GetValue('uid')
+```
+
+</TabItem>
+</Tabs>
+
+## Arguments
+
+| Argument | Data Type | Optional | Default Value | Explanation                   |
+| -------- | --------- | -------- | ------------- | ----------------------------- |
+| property | String    | No       | -             | The property to get the value |
