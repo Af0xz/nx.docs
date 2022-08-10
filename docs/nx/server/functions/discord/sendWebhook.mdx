@@ -3,4 +3,72 @@ import TabItem from '@theme/TabItem'
 
 # SendWebhook
 
-`// TODO`
+This function well send a webhook to the url provided.
+
+```typescript
+NX.Discord.SendWebhook({ data, options })
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript/JavaScript">
+
+```typescript title="/rc/server/commands/commands.servcice.ts"
+const NX = exports.NX.useServer()
+
+NX.Discord.SendWebhook({
+  data: {
+    embeds: [
+      {
+        title: 'Hello world',
+        color: 3066993,
+        description: `Hello guys how are you ?`,
+      },
+    ],
+  },
+  options: {
+    url: 'webhook',
+  },
+})
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua title="/rc/server/commands/commands.servcice.ts"
+local NX = exports['NX']:useServer()
+
+NX.Discord.SendWebhook({
+  data = {
+    embeds = {
+      {
+        title = 'Hello world',
+        color = 3066993,
+        description = `Hello guys how are you ?`,
+      },
+    },
+  },
+  options = {
+    url = 'webhook'
+  }
+})
+```
+
+</TabItem>
+</Tabs>
+
+## Arguments
+
+| Argument | Data Type | Optional | Default Value | Explanation                |
+| -------- | --------- | -------- | ------------- | -------------------------- |
+| data     | Object    | No       | -             | The data to send           |
+| options  | Object    | No       | -             | The options of the webhook |
+
+### Options
+
+| Argument | Data Type | Optional | Default Value | Explanation            |
+| -------- | --------- | -------- | ------------- | ---------------------- |
+| url      | String    | No       | -             | The url of the webhook |

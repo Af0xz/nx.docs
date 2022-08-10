@@ -9,6 +9,10 @@ This function well create a new command.
 NX.Misc.AddCommand(name, cb, authPermissions)
 ```
 
+:::caution
+The first argument of the `callback` is always the `source`
+:::
+
 ---
 
 ## Example
@@ -22,7 +26,7 @@ const NX = exports.NX.useServer()
 NX.Misc.AddCommand(
   'kill',
   (source, args) => {
-    //
+    console.log(args[0])
   },
   ['admin']
 )
@@ -35,7 +39,7 @@ NX.Misc.AddCommand(
 local NX = exports['NX']:useServer()
 
 NX.Misc.AddCommand('nx', function (source, args)
-    --
+  print(args[1])
 end, {"admin"})
 ```
 

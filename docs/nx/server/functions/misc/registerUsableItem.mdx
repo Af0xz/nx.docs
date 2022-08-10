@@ -17,9 +17,14 @@ NX.Misc.RegisterUsableItem(name, cb)
 <TabItem value="ts" label="TypeScript/JavaScript">
 
 ```typescript title="/rc/server/items/items.service.ts"
+// Client side
+emitNet('NX::useItem', 'bread')
+
+// Server side
 const NX = exports.NX.useServer()
 
 NX.Misc.RegisterUsableItem('bread', (source) => {
+  // The first argument is always the source of the client.
   const naPlayer = NX.Players.Get(source)
   const item = naPlayer.HasItem('bread')
 
@@ -33,9 +38,15 @@ NX.Misc.RegisterUsableItem('bread', (source) => {
 <TabItem value="lua" label="Lua">
 
 ```lua title="/rc/server/items/items.service.ts"
+-- Client side
+TriggerServerEvent('NX::useItem', 'bread')
+
+
+-- Server side
 local NX = exports['NX']:useServer()
 
-NX.Misc.RegisterUsableItem('bread', function()
+NX.Misc.RegisterUsableItem('bread', function(source)
+    -- The first argument is always the source of the client.
     local naPlayer = NX.Players.Get(source)
     local item = naPlayer.HasItem("bread")
 

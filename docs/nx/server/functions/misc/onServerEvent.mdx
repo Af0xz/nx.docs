@@ -11,11 +11,11 @@ NX.Misc.OnServerEvent(eventName, cb)
 
 ---
 
-:::caution
-**last callback** argument is always the callback
-:::
-
 ## Example
+
+:::caution
+**last callback** argument is always the callback to respond to the client side
+:::
 
 <Tabs>
 <TabItem value="ts" label="TypeScript/JavaScript">
@@ -23,9 +23,9 @@ NX.Misc.OnServerEvent(eventName, cb)
 ```typescript title="/rc/server/events/index.ts"
 const NX = exports.NX.useServer()
 
-NX.Misc.OnServerEvent('NX::helloWorld', (arg1, cb) => {
-  console.log(arg1)
-  cb('NX::helloWorld')
+NX.Misc.OnServerEvent('NX::helloWorld', (arg1, arg2, cb) => {
+  console.log(arg1, arg2)
+  cb('Hello world')
 })
 ```
 
@@ -35,9 +35,9 @@ NX.Misc.OnServerEvent('NX::helloWorld', (arg1, cb) => {
 ```lua title="/rc/server/events/index.ts"
 local NX = exports['NX']:useServer()
 
-NX.Misc.OnServerEvent("NX::helloWorld", function()
-    print(arg1)
-    cb('NX::helloWorld')
+NX.Misc.OnServerEvent("NX::helloWorld", function(arg1, arg2, cb)
+    print(arg1, arg2)
+    cb('Hello world')
 end)
 ```
 
