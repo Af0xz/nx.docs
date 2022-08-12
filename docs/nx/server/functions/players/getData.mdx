@@ -1,0 +1,63 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# GetData
+
+This function well get the player and return all data.
+
+```typescript
+NX.Players.GetData(source)
+```
+
+:::danger
+Don't edit the data that is returned.
+:::
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript/JavaScript">
+
+```typescript title="/rc/server/player/player.service.ts"
+const NX = exports.NX.useServer()
+
+const nxPlayer = NX.Players.GetData(1)
+
+console.log(nxPlayer.uid)
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua title="/rc/server/player/player.service.ts"
+local NX = exports['NX']:useServer()
+
+local nxPlayer = NX.Players.GetData(1)
+
+print(nxPlayer.uid)
+```
+
+</TabItem>
+</Tabs>
+
+---
+
+## Returns
+
+```js
+{
+    accounts,
+    position,
+    identifier,
+    inventory,
+    charinfo,
+    permissions,
+    weight,
+    source,
+    uid,
+    maxWeight,
+    name,
+}
+```

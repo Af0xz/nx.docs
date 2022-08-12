@@ -11,6 +11,11 @@ module.exports = {
       label: 'Developpement',
     },
     {
+      type: 'doc',
+      id: 'nx/config/config',
+      label: 'Configuration',
+    },
+    {
       type: 'category',
       label: 'API',
       items: [
@@ -22,6 +27,11 @@ module.exports = {
               type: 'category',
               label: 'Events',
               items: [
+                {
+                  type: 'doc',
+                  id: 'nx/client/events/item',
+                  label: 'Item',
+                },
                 {
                   type: 'doc',
                   id: 'nx/client/events/loadingBar',
@@ -188,8 +198,23 @@ module.exports = {
                 },
                 {
                   type: 'doc',
+                  id: 'nx/server/functions/players/getData',
+                  label: 'GetData',
+                },
+                {
+                  type: 'doc',
                   id: 'nx/server/functions/players/getAll',
                   label: 'GetAll',
+                },
+                {
+                  type: 'doc',
+                  id: 'nx/server/functions/players/getAllData',
+                  label: 'GetAllData',
+                },
+                {
+                  type: 'doc',
+                  id: 'nx/server/functions/players/saveAll',
+                  label: 'SaveAll',
                 },
               ],
             },

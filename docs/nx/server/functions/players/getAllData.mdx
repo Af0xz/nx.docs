@@ -1,13 +1,17 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
-# GetAll
+# GetData
 
-This function well return the sources of all connected players.
+This function well get all players and return all data.
 
 ```typescript
-NX.Players.GetAll()
+NX.Players.GetAllData()
 ```
+
+:::danger
+Don't edit the data that is returned.
+:::
 
 ---
 
@@ -19,10 +23,10 @@ NX.Players.GetAll()
 ```typescript title="/rc/server/player/player.service.ts"
 const NX = exports.NX.useServer()
 
-const nxPlayers = NX.Players.GetAll()
+const nxPlayers = NX.Players.GetAllData()
 
 for (const nxPlayer of nxPlayers) {
-  console.log(`Player source: ${nxPlayer}`)
+  console.log(nxPlayer.uid)
 }
 ```
 
@@ -32,12 +36,32 @@ for (const nxPlayer of nxPlayers) {
 ```lua title="/rc/server/player/player.service.ts"
 local NX = exports['NX']:useServer()
 
-local nxPlayers = NX.Players.GetAll()
+local nxPlayers = NX.Players.GetAllData()
 
 for key in pairs(nxPlayers) do
-    print(key)
+    print(nxPlayer.uid)
 end
 ```
 
 </TabItem>
 </Tabs>
+
+---
+
+## Returns
+
+```js
+{
+    accounts,
+    position,
+    identifier,
+    inventory,
+    charinfo,
+    permissions,
+    weight,
+    source,
+    uid,
+    maxWeight,
+    name,
+}
+```

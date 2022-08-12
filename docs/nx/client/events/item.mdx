@@ -1,0 +1,72 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# Item
+
+## `NX::useItem`
+
+From client side ✔️
+
+From server side ❌
+
+<Tabs>
+<TabItem value="ts" label="TypeScript/JavaScript">
+
+```ts
+emit('NX::useItem', 'bread')
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua
+TriggerEvent('NX::useItem', 'bread')
+```
+
+</TabItem>
+</Tabs>
+
+---
+
+## `NX::createItem`
+
+From client side ❌
+
+From server side ✔️
+
+<Tabs>
+<TabItem value="ts" label="TypeScript/JavaScript">
+
+```ts
+emit('NX::createItem', {
+    label: 'AK47',
+    weight: 50,
+    type: 'gun',
+    name: 'ak47'
+    props: 'w_ar_assaultrifle'
+}, (res) => {
+    if(res.status === 'succes') {
+        console.log(res.message)
+    }
+})
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua
+TriggerEvent('NX::createItem', {
+    label = 'AK47',
+    weight = 50,
+    type = 'gun',
+    name = 'ak47'
+    props = 'w_ar_assaultrifle'
+}, function (res)
+    if(res.status == 'succes') then
+        print(res.message)
+    end
+end)
+```
+
+</TabItem>
+</Tabs>

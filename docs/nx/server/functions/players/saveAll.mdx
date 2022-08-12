@@ -1,12 +1,12 @@
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
-# GetAll
+# SaveAll
 
-This function well return the sources of all connected players.
+This function will save all the players that are connected.
 
 ```typescript
-NX.Players.GetAll()
+NX.Players.SaveAll()
 ```
 
 ---
@@ -19,11 +19,7 @@ NX.Players.GetAll()
 ```typescript title="/rc/server/player/player.service.ts"
 const NX = exports.NX.useServer()
 
-const nxPlayers = NX.Players.GetAll()
-
-for (const nxPlayer of nxPlayers) {
-  console.log(`Player source: ${nxPlayer}`)
-}
+NX.Players.SaveAll()
 ```
 
 </TabItem>
@@ -32,11 +28,7 @@ for (const nxPlayer of nxPlayers) {
 ```lua title="/rc/server/player/player.service.ts"
 local NX = exports['NX']:useServer()
 
-local nxPlayers = NX.Players.GetAll()
-
-for key in pairs(nxPlayers) do
-    print(key)
-end
+NX.Players.SaveAll()
 ```
 
 </TabItem>
