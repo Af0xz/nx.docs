@@ -1,0 +1,108 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# Create
+
+This function well create an timeline.
+
+```typescript
+NX.Timeline.Create(data)
+```
+
+---
+
+## Example
+
+:::caution
+
+**ID** most be **unique**.
+
+:::
+
+<Tabs>
+<TabItem value="ts" label="TypeScript">
+
+```typescript title="/rc/client/timeline/timeline.service.ts"
+const NX = exports.NX.useClient()
+
+NX.Timeline.Create({
+  rows: [
+    {
+      label: 'Kill a player',
+      id: '1',
+      type: 'OUTLINE',
+    },
+    {
+      label: 'Throw a grenade',
+      id: '2',
+    },
+  ],
+})
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js title="/rc/client/timeline/timeline.service.ts"
+const NX = exports.NX.useClient()
+
+NX.Timeline.Create({
+  rows: [
+    {
+      label: 'Kill a player',
+      id: '1',
+      type: 'OUTLINE',
+    },
+    {
+      label: 'Throw a grenade',
+      id: '2',
+    },
+  ],
+})
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua title="/rc/client/timeline/timeline.service.ts"
+local NX = exports['NX']:useClient()
+
+NX.Timeline.Create({
+    rows = {
+        {
+            label = 'Kill a player',
+            id = '1',
+            type = 'OUTLINE'
+        },
+        {
+            label = 'Throw a grenade',
+            id = '2'
+        },
+    }
+})
+```
+
+</TabItem>
+</Tabs>
+
+---
+
+## Arguments
+
+| Argument | Data Type | Optional | Default Value | Explanation       |
+| -------- | --------- | -------- | ------------- | ----------------- |
+| data     | Object    | No       | -             | The configuration |
+
+### Rows
+
+| Argument | Data Type | Optional | Default Value | Explanation         |
+| -------- | --------- | -------- | ------------- | ------------------- |
+| rows     | Array     | No       | -             | The rows to create. |
+
+### Row
+
+| Argument | Data Type | Optional | Default Value | Explanation    |
+| -------- | --------- | -------- | ------------- | -------------- |
+| label    | String    | No       | -             | The row label. |
+| id       | String    | No       | -             | The row ID.    |
+| type     | String    | Yes      | "DOT"         | The row type.  |

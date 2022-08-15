@@ -1,0 +1,70 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# Create
+
+This function well update the timeline.
+
+```typescript
+NX.Timeline.Update(data)
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript">
+
+```typescript title="/rc/client/timeline/timeline.service.ts"
+const NX = exports.NX.useClient()
+
+NX.Timeline.Update({
+  type: 'SET_COMPLETED',
+  id: '1',
+})
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js title="/rc/client/timeline/timeline.service.ts"
+const NX = exports.NX.useClient()
+
+NX.Timeline.Update({
+  type: 'SET_COMPLETED',
+  id: '1',
+})
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua title="/rc/client/timeline/timeline.service.ts"
+local NX = exports['NX']:useClient()
+
+NX.Timeline.Update(
+  {
+    type = "SET_COMPLETED",
+    id = "1"
+  }
+)
+```
+
+</TabItem>
+</Tabs>
+
+---
+
+## Arguments
+
+| Argument | Data Type | Optional | Default Value | Explanation       |
+| -------- | --------- | -------- | ------------- | ----------------- |
+| data     | Object    | No       | -             | The configuration |
+
+### Rows
+
+| Argument | Data Type | Optional | Default Value | Explanation                                                   |
+| -------- | --------- | -------- | ------------- | ------------------------------------------------------------- |
+| type     | String    | No       | -             | The update type can be: `SET_COMPLETED` or `SET_UNCOMPLETED`. |
+| id       | String    | No       | -             | The id of the row to update                                   |

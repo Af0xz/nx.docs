@@ -118,6 +118,32 @@ module.exports = {
                 },
                 {
                   type: 'category',
+                  label: 'Timeline',
+                  items: [
+                    {
+                      type: 'doc',
+                      id: 'nx/client/functions/timeline/create',
+                      label: 'Create',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/client/functions/timeline/update',
+                      label: 'Update',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/client/functions/timeline/destroy',
+                      label: 'Destroy',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/client/functions/timeline/isActive',
+                      label: 'IsActive',
+                    },
+                  ],
+                },
+                {
+                  type: 'category',
                   label: 'Objects',
                   items: [
                     {

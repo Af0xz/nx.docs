@@ -1,0 +1,44 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# IsActive
+
+This function well return a boolean.
+
+```typescript
+NX.Timeline.IsActive()
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript">
+
+```typescript title="/rc/client/timeline/timeline.service.ts"
+const NX = exports.NX.useClient()
+
+console.log(NX.Timeline.IsActive())
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js title="/rc/client/timeline/timeline.service.ts"
+const NX = exports.NX.useClient()
+
+console.log(NX.Timeline.IsActive())
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua title="/rc/client/timeline/timeline.service.ts"
+local NX = exports['NX']:useClient()
+
+print(NX.Timeline.IsActive())
+```
+
+</TabItem>
+</Tabs>

@@ -1,0 +1,44 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# Destroy
+
+This function well destroy the timeline.
+
+```typescript
+NX.Timeline.Destroy()
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript">
+
+```typescript title="/rc/client/timeline/timeline.service.ts"
+const NX = exports.NX.useClient()
+
+NX.Timeline.Destroy()
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js title="/rc/client/timeline/timeline.service.ts"
+const NX = exports.NX.useClient()
+
+NX.Timeline.Destroy()
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua title="/rc/client/timeline/timeline.service.ts"
+local NX = exports['NX']:useClient()
+
+NX.Timeline.Destroy()
+```
+
+</TabItem>
+</Tabs>
