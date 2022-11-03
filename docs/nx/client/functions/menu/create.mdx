@@ -1,0 +1,262 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# Create
+
+This function well create an input menu.
+
+```typescript
+NX.Menu.CreateMenu({ options, items })
+```
+
+---
+
+## Example
+
+:::caution
+
+**ID** most be **unique**.
+
+:::
+
+<Tabs>
+<TabItem value="ts" label="TypeScript">
+
+```typescript title="/rc/client/menu/menu.service.ts"
+const NX = exports.NX.useClient()
+
+NX.Menu.CreateMenu({
+  options: {
+    title: 'Custom',
+    banner:
+      'https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000',
+    width: 400,
+  },
+  items: [
+    {
+      type: 'BUTTON',
+      label: 'Button',
+      id: 'button-1',
+      onClick: () => console.log('Hello world !'),
+    },
+    {
+      type: 'SLIDER',
+      label: 'Slider',
+      max: 15,
+      min: 5,
+      id: 'slider-1',
+    },
+    {
+      type: 'SEPARATOR',
+      label: 'SEPARATOR',
+      id: 'separator-1',
+    },
+    {
+      type: 'CHECKBOX',
+      label: 'Chckbox',
+      id: 'checkbox-1',
+      onChange: (checkbox: any) => console.log(checkbox),
+    },
+    {
+      type: 'LIST',
+      label: 'Chckbox',
+      id: 'list-1',
+      onChange: (choice: any) => console.log(choice),
+
+      choices: [
+        {
+          id: '1',
+          label: 'Un',
+        },
+        {
+          id: '2',
+          label: 'Deux',
+        },
+        {
+          id: '3',
+          label: 'Trois',
+        },
+      ],
+    },
+    {
+      type: 'BUTTON',
+      label: 'Valider',
+      id: 'btn11-1',
+    },
+  ],
+})
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js title="/rc/client/menu/menu.service.ts"
+const NX = exports.NX.useClient()
+
+NX.Menu.CreateMenu({
+  options: {
+    title: 'Custom',
+    banner:
+      'https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000',
+    width: 400,
+  },
+  items: [
+    {
+      type: 'BUTTON',
+      label: 'Button',
+      id: 'button-1',
+      onClick: () => console.log('Hello world !'),
+    },
+    {
+      type: 'SLIDER',
+      label: 'Slider',
+      max: 15,
+      min: 5,
+      id: 'slider-1',
+    },
+    {
+      type: 'SEPARATOR',
+      label: 'SEPARATOR',
+      id: 'separator-1',
+    },
+    {
+      type: 'CHECKBOX',
+      label: 'Chckbox',
+      id: 'checkbox-1',
+      onChange: (checkbox) => console.log(checkbox),
+    },
+    {
+      type: 'LIST',
+      label: 'Chckbox',
+      id: 'list-1',
+      onChange: (choice) => console.log(choice),
+
+      choices: [
+        {
+          id: '1',
+          label: 'Un',
+        },
+        {
+          id: '2',
+          label: 'Deux',
+        },
+        {
+          id: '3',
+          label: 'Trois',
+        },
+      ],
+    },
+    {
+      type: 'BUTTON',
+      label: 'Valider',
+      id: 'btn11-1',
+    },
+  ],
+})
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua title="/rc/client/menu/menu.service.ts"
+local NX = exports['NX']:useClient()
+
+function onClick()
+print('Hello World')
+end
+
+function onChange(obj)
+print('Hello World')
+end
+
+NX.Menu.CreateMenu({
+    options = {
+      title = 'Custom',
+      banner =
+        'https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000',
+      width = 400,
+    },
+    items = [
+      {
+        type = 'BUTTON',
+        label = 'Button',
+        id = 'button-1',
+        onClick = onClick,
+      },
+      {
+        type = 'SLIDER',
+        label = 'Slider',
+        max = 15,
+        min = 5,
+        id = 'slider-1',
+      },
+      {
+        type = 'SEPARATOR',
+        label = 'SEPARATOR',
+        id = 'separator-1',
+      },
+      {
+        type = 'CHECKBOX',
+        label = 'Chckbox',
+        id = 'checkbox-1',
+        onChange = onChange,
+      },
+      {
+        type = 'LIST',
+        label = 'Chckbox',
+        id = 'list-1',
+        onChange = onChange,
+
+        choices = [
+          {
+            id = '1',
+            label = 'Un',
+          },
+          {
+            id = '2',
+            label = 'Deux',
+          },
+          {
+            id = '3',
+            label = 'Trois',
+          },
+        ],
+      },
+      {
+        type = 'BUTTON',
+        label = 'Valider',
+        id = 'btn11-1',
+      },
+    ],
+  })
+```
+
+</TabItem>
+</Tabs>
+
+---
+
+## Arguments
+
+| Argument | Data Type | Optional | Default Value | Explanation                    |
+| -------- | --------- | -------- | ------------- | ------------------------------ |
+| Options  | Object    | No       | -             | The configuration for the menu |
+| Items    | Object    | No       | -             | What the menu contains         |
+
+### Options
+
+| Argument | Data Type | Optional | Default Value | Explanation                   |
+| -------- | --------- | -------- | ------------- | ----------------------------- |
+| title    | String    | No       | -             | The title of the menu.        |
+| banner   | URL       | No       | -             | The background Color / image. |
+| width    | number    | Yes      | `400`         | The Menu Size.                |
+
+### Items
+
+| Argument | Data Type | Optional | Default Value | Explanation                                                                  |
+| -------- | --------- | -------- | ------------- | ---------------------------------------------------------------------------- |
+| type     | String    | No       | -             | The type of the item can be `BUTTON & SLIDER & LIST & CHECKBOX & SEPARATOR`. |
+| label    | String    | No       | -             | The label of the item.                                                       |
+| id       | String    | No       | -             | The id of Item `MOST BE UNIQUE`.                                             |
+| onClick  | Function  | Yes      | -             | Detects item is clicked `ONLY FOR BUTTON`.                                   |
+| onChange | Function  | Yes      | -             | Detects when item is change `ONLY FOR LIST & CHECKBOX`.                      |
