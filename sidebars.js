@@ -423,7 +423,7 @@ module.exports = {
                 },
                 {
                   type: 'doc',
-                  id: 'nx/server/functions/nxPlayers/setCharInfoKey',
+                  id: 'nx/server/functions/nxPlayer/setCharInfoKey',
                   label: 'SetCharInfoKey',
                 },
               ],
