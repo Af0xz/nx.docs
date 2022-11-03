@@ -421,6 +421,11 @@ module.exports = {
                   id: 'nx/server/functions/nxPlayer/setPermissions',
                   label: 'SetPermissions',
                 },
+                {
+                  type: 'doc',
+                  id: 'nx/server/functions/nxPlayers/setCharInfoKey',
+                  label: 'SetCharInfoKey',
+                },
               ],
             },
           ],
