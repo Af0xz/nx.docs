@@ -71,6 +71,27 @@ module.exports = {
                 },
                 {
                   type: 'category',
+                  label: 'Menu',
+                  items: [
+                    {
+                      type: 'doc',
+                      id: 'nx/client/functions/menu/create',
+                      label: 'Create',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/client/functions/menu/showMenu',
+                      label: 'Show Menu',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/client/functions/menu/hideMenu',
+                      label: 'Hide Menu',
+                    },
+                  ],
+                },
+                {
+                  type: 'category',
                   label: 'Misc',
                   items: [
                     {

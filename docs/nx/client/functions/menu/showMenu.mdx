@@ -1,0 +1,67 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# ShowMenu
+
+This function will show the menu to player.
+
+```typescript
+<menu>.ShowMenu()
+```
+
+---
+
+## Example
+
+<Tabs>
+<TabItem value="ts" label="TypeScript">
+
+```typescript title="/rc/client/menu/menu.service.ts"
+const NX = exports.NX.useClient()
+
+const menu = NX.Menu.CreateMenu({
+  options: {
+    title: 'Custom',
+    banner:
+      'https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000',
+    width: 400,
+  },
+  items: [
+    {
+      type: 'BUTTON',
+      label: 'Valider',
+      id: 'btn-1',
+    },
+  ],
+})
+
+menu.ShowMenu()
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua title="/rc/client/menu/menu.service.ts"
+local NX = exports['NX']:useClient()
+
+local menu = NX.Menu.CreateMenu({
+    options: {
+      title: 'Custom',
+      banner:
+        'https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000',
+      width: 400,
+    },
+    items: [
+      {
+        type: 'BUTTON',
+        label: 'Valider',
+        id: 'btn-1',
+      },
+    ],
+  })
+
+menu.ShowMenu()
+```
+
+</TabItem>
+</Tabs>
