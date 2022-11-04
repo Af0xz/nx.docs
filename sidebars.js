@@ -42,6 +42,11 @@ module.exports = {
                   id: 'nx/client/events/notification',
                   label: 'Notification',
                 },
+                {
+                  type: 'doc',
+                  id: 'nx/client/events/onPermissionsUpdated',
+                  label: 'onPermissionsUpdated',
+                },
               ],
             },
             {

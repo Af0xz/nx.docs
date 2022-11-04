@@ -1,3 +1,116 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 # Configuration
 
-`// TODO`
+## Dependecies
+
+If you want NX to work smoothly with all of its capabilities, please use the following dependencies:
+
+1. [spawnmanager](https://github.com/citizenfx/cfx-server-data/tree/master/resources/%5Bmanagers%5D/spawnmanager)
+2. [skinmanager](https://github.com/mitlight/skinchanger)
+
+:::caution
+
+You have to **stop basic-gamemode**
+
+:::
+
+## Downloading Release
+
+You can download the latest [release](https://github.com/niiyy/NX/releases) of NX
+
+- TODO
+
+## Setup
+
+### Database
+
+1. To setup the database, You need to import the **[sql](https://github.com/niiyy/NX/blob/main/import.sql)** file from the NX folder into your database
+
+2. To connect your database , you need to go in **[config/nx.config.json](https://github.com/niiyy/NX/blob/main/config/nx.config.json)** file then replace the imformation in database with yours
+
+:::caution
+
+You don't need **mysql-async** , **oxmysql** or **anything** else and you **don't need to connect it from the server.cfg**. NX manages the connection to your database!
+
+:::
+
+```json title="NX/config/nx.config.json"
+  "database": {
+    "host": "localhost",
+    "user": "root",
+    "password": "",
+    "database": "nx"
+  },
+```
+
+### Player Configuration
+
+1. The configration of the players happens in the file **[nx.config.json](https://github.com/niiyy/NX/blob/main/config/nx.config.json)** locate in config folder in NX
+
+#### Player Weight
+
+You can change the **starting weight** for all players
+
+```json title="NX/config/nx.config.json"
+  "player": {
+    "maxWeight": 500000
+  },
+```
+
+#### Player Account
+
+You can set the **starter account money** for all players
+
+```json title="NX/config/nx.config.json"
+  "accounts": {
+    "bank": 0
+  },
+```
+
+### Discord Configuration
+
+1. NX integrates a **webhook** and **richpresence** system , you can change it !
+
+#### Webhook system
+
+With the **webhook system** , you can set a **logs** to know what players are doing on your server !
+
+To create a webhook , you need to create a **[webhook](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks)** and set the link in the lines **"webhook": "YourLink",**
+
+```json title="NX/config/nx.config.json"
+    "logs": {
+      "webhook": "",
+      "logsConfiguration": {
+        "playerJoin": false,
+        "playerDropped": false
+      }
+    },
+```
+
+#### Richpresence system
+
+With the **richpresence system** , yyou can set **application discord** when players play on your server with your image , text !
+
+To create a **richpresence** , you need to create an application on **[discord](https://discord.com/developers/applications)** and set your image in your applications !
+
+```json title="NX/config/nx.config.json"
+  "richPresence": {
+      "active": false,
+      "appID": "",
+      "image": "",
+      "imageHoverText": "",
+      "buttons": [
+        {
+          "label": "",
+          "href": ""
+        },
+        {
+          "label": "",
+          "href": ""
+        }
+      ],
+      "text": ""
+    }
+```

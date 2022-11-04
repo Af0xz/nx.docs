@@ -1,0 +1,37 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# Item
+
+## `NX::onPermissionsUpdated`
+
+:::caution
+
+Use Only from **Client** Side !
+
+:::
+
+<Tabs>
+<TabItem value="ts" label="TypeScript/JavaScript">
+
+```ts
+on('NX::onPermissionsUpdated', (permission) => {
+  if (permission === 'admin') {
+    console.log('Player Is An Admin')
+  }
+})
+```
+
+</TabItem>
+<TabItem value="lua" label="Lua">
+
+```lua
+AddEventHandler('NX::onPermissionsUpdated', function()
+    if permission == 'admin' then
+        print("Player Is An Admin")
+    end
+end)
+```
+
+</TabItem>
+</Tabs>
