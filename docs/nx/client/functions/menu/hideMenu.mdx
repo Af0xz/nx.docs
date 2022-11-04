@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem'
 This function will hide the menu to player.
 
 ```typescript
-<menu>.HideMenu()
+yourMenuName.HideMenu()
 ```
 
 ---
@@ -19,7 +19,7 @@ This function will hide the menu to player.
 ```typescript title="/rc/client/menu/menu.service.ts"
 const NX = exports.NX.useClient()
 
-const menu = NX.Menu.CreateMenu({
+const yourMenuName = NX.Menu.CreateMenu({
   options: {
     title: 'Custom',
     banner:
@@ -35,7 +35,7 @@ const menu = NX.Menu.CreateMenu({
   ],
 })
 
-menu.HideMenu()
+yourMenuName.HideMenu()
 ```
 
 </TabItem>
@@ -44,7 +44,7 @@ menu.HideMenu()
 ```lua title="/rc/client/menu/menu.service.ts"
 local NX = exports['NX']:useClient()
 
-local menu = NX.Menu.CreateMenu({
+local yourMenuName = NX.Menu.Create({
     options = {
       title = 'Custom',
       banner =
@@ -60,7 +60,7 @@ local menu = NX.Menu.CreateMenu({
     ],
   })
 
-menu.ShowMenu()
+yourMenuName.ShowMenu()
 ```
 
 </TabItem>

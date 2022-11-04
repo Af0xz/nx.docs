@@ -25,7 +25,7 @@ NX.Menu.CreateMenu({ options, items })
 ```typescript title="/rc/client/menu/menu.service.ts"
 const NX = exports.NX.useClient()
 
-NX.Menu.CreateMenu({
+NX.Menu.Create({
   options: {
     title: 'Custom',
     banner:
@@ -93,7 +93,7 @@ NX.Menu.CreateMenu({
 ```js title="/rc/client/menu/menu.service.ts"
 const NX = exports.NX.useClient()
 
-NX.Menu.CreateMenu({
+NX.Menu.Create({
   options: {
     title: 'Custom',
     banner:
@@ -169,7 +169,7 @@ function onChange(obj)
 print('Hello World')
 end
 
-NX.Menu.CreateMenu({
+NX.Menu.Create({
     options = {
       title = 'Custom',
       banner =

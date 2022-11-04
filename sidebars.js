@@ -236,195 +236,222 @@ module.exports = {
           items: [
             {
               type: 'category',
-              label: 'Players',
+              label: 'Events',
               items: [
                 {
                   type: 'doc',
-                  id: 'nx/server/functions/players/get',
-                  label: 'Get',
+                  id: 'nx/server/events/items',
+                  label: 'Items',
                 },
                 {
                   type: 'doc',
-                  id: 'nx/server/functions/players/getData',
-                  label: 'GetData',
+                  id: 'nx/server/events/misc',
+                  label: 'Misc',
                 },
                 {
                   type: 'doc',
-                  id: 'nx/server/functions/players/getAll',
-                  label: 'GetAll',
-                },
-                {
-                  type: 'doc',
-                  id: 'nx/server/functions/players/getAllData',
-                  label: 'GetAllData',
-                },
-                {
-                  type: 'doc',
-                  id: 'nx/server/functions/players/saveAll',
-                  label: 'SaveAll',
+                  id: 'nx/server/events/notification',
+                  label: 'Notification',
                 },
               ],
             },
             {
               type: 'category',
-              label: 'Misc',
+              label: 'Functions',
               items: [
                 {
-                  type: 'doc',
-                  id: 'nx/server/functions/misc/addCommand',
-                  label: 'AddCommand',
+                  type: 'category',
+                  label: 'Players',
+                  items: [
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/players/get',
+                      label: 'Get',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/players/getData',
+                      label: 'GetData',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/players/getAll',
+                      label: 'GetAll',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/players/getAllData',
+                      label: 'GetAllData',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/players/saveAll',
+                      label: 'SaveAll',
+                    },
+                  ],
                 },
                 {
-                  type: 'doc',
-                  id: 'nx/server/functions/misc/onServerEvent',
-                  label: 'OnServerEvent',
+                  type: 'category',
+                  label: 'Misc',
+                  items: [
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/misc/addCommand',
+                      label: 'AddCommand',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/misc/onServerEvent',
+                      label: 'OnServerEvent',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/misc/registerUsableItem',
+                      label: 'RegisterUsableItem',
+                    },
+                  ],
                 },
                 {
-                  type: 'doc',
-                  id: 'nx/server/functions/misc/registerUsableItem',
-                  label: 'RegisterUsableItem',
-                },
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Discord',
-              items: [
-                {
-                  type: 'doc',
-                  id: 'nx/server/functions/discord/sendWebhook',
-                  label: 'SendWebhook',
-                },
-              ],
-            },
-            {
-              type: 'category',
-              label: 'nxPlayer',
-              items: [
-                {
-                  type: 'doc',
-                  id: 'nx/server/functions/nxPlayer/addItem',
-                  label: 'AddItem',
+                  type: 'category',
+                  label: 'Discord',
+                  items: [
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/discord/sendWebhook',
+                      label: 'SendWebhook',
+                    },
+                  ],
                 },
                 {
-                  type: 'doc',
-                  id: 'nx/server/functions/nxPlayer/emitEvent',
-                  label: 'EmitEvent',
-                },
-                {
-                  type: 'doc',
-                  id: 'nx/server/functions/nxPlayer/getAccountMoney',
-                  label: 'GetAccountMoney',
-                },
-                {
-                  type: 'doc',
-                  id: 'nx/server/functions/nxPlayer/getAccounts',
-                  label: 'GetAccounts',
-                },
-                {
-                  type: 'doc',
-                  id: 'nx/server/functions/nxPlayer/getBloodType',
-                  label: 'GetBloodType',
-                },
-                {
-                  type: 'doc',
-                  id: 'nx/server/functions/nxPlayer/getCharInfo',
-                  label: 'GetCharInfo',
-                },
-                {
-                  type: 'doc',
-                  id: 'nx/server/functions/nxPlayer/getCoords',
-                  label: 'GetCoords',
-                },
-                {
-                  type: 'doc',
-                  id: 'nx/server/functions/nxPlayer/getHunger',
-                  label: 'GetHunger',
-                },
-                {
-                  type: 'doc',
-                  id: 'nx/server/functions/nxPlayer/getIdentifier',
-                  label: 'GetIdentifier',
-                },
-                {
-                  type: 'doc',
-                  id: 'nx/server/functions/nxPlayer/getUID',
-                  label: 'GetUID',
-                },
-                {
-                  type: 'doc',
-                  id: 'nx/server/functions/nxPlayer/getInventory',
-                  label: 'GetInventory',
-                },
-                {
-                  type: 'doc',
-                  id: 'nx/server/functions/nxPlayer/getJob',
-                  label: 'GetJob',
-                },
-                {
-                  type: 'doc',
-                  id: 'nx/server/functions/nxPlayer/getMaxWeight',
-                  label: 'GetMaxWeight',
-                },
-                {
-                  type: 'doc',
-                  id: 'nx/server/functions/nxPlayer/getName',
-                  label: 'GetName',
-                },
-                {
-                  type: 'doc',
-                  id: 'nx/server/functions/nxPlayer/getPermissions',
-                  label: 'GetPermissions',
-                },
-                {
-                  type: 'doc',
-                  id: 'nx/server/functions/nxPlayer/getThirst',
-                  label: 'GetThirst',
-                },
-                {
-                  type: 'doc',
-                  id: 'nx/server/functions/nxPlayer/getWeight',
-                  label: 'GetWeight',
-                },
-                {
-                  type: 'doc',
-                  id: 'nx/server/functions/nxPlayer/hasItem',
-                  label: 'HasItem',
-                },
-                {
-                  type: 'doc',
-                  id: 'nx/server/functions/nxPlayer/kick',
-                  label: 'Kick',
-                },
-                {
-                  type: 'doc',
-                  id: 'nx/server/functions/nxPlayer/removeItem',
-                  label: 'RemoveItem',
-                },
-                {
-                  type: 'doc',
-                  id: 'nx/server/functions/nxPlayer/save',
-                  label: 'Save',
-                },
-                {
-                  type: 'doc',
-                  id: 'nx/server/functions/nxPlayer/setAccountMoney',
-                  label: 'SetAccountMoney',
-                },
-                {
-                  type: 'doc',
-                  id: 'nx/server/functions/nxPlayer/setJob',
-                  label: 'SetJob',
-                },
-                {
-                  type: 'doc',
-                  id: 'nx/server/functions/nxPlayer/setPermissions',
-                  label: 'SetPermissions',
-                },
-                {
-                  type: 'doc',
-                  id: 'nx/server/functions/nxPlayer/setCharInfoKey',
-                  label: 'SetCharInfoKey',
+                  type: 'category',
+                  label: 'nxPlayer',
+                  items: [
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/nxPlayer/addItem',
+                      label: 'AddItem',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/nxPlayer/emitEvent',
+                      label: 'EmitEvent',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/nxPlayer/getAccountMoney',
+                      label: 'GetAccountMoney',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/nxPlayer/getAccounts',
+                      label: 'GetAccounts',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/nxPlayer/getBloodType',
+                      label: 'GetBloodType',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/nxPlayer/getCharInfo',
+                      label: 'GetCharInfo',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/nxPlayer/getCoords',
+                      label: 'GetCoords',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/nxPlayer/getHunger',
+                      label: 'GetHunger',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/nxPlayer/getIdentifier',
+                      label: 'GetIdentifier',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/nxPlayer/getUID',
+                      label: 'GetUID',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/nxPlayer/getInventory',
+                      label: 'GetInventory',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/nxPlayer/getJob',
+                      label: 'GetJob',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/nxPlayer/getMaxWeight',
+                      label: 'GetMaxWeight',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/nxPlayer/getName',
+                      label: 'GetName',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/nxPlayer/getPermissions',
+                      label: 'GetPermissions',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/nxPlayer/getThirst',
+                      label: 'GetThirst',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/nxPlayer/getWeight',
+                      label: 'GetWeight',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/nxPlayer/hasItem',
+                      label: 'HasItem',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/nxPlayer/kick',
+                      label: 'Kick',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/nxPlayer/removeItem',
+                      label: 'RemoveItem',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/nxPlayer/save',
+                      label: 'Save',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/nxPlayer/setAccountMoney',
+                      label: 'SetAccountMoney',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/nxPlayer/setJob',
+                      label: 'SetJob',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/nxPlayer/setPermissions',
+                      label: 'SetPermissions',
+                    },
+                    {
+                      type: 'doc',
+                      id: 'nx/server/functions/nxPlayer/setCharInfoKey',
+                      label: 'SetCharInfoKey',
+                    },
+                  ],
                 },
               ],
             },
