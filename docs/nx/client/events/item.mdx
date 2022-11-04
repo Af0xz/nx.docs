@@ -5,9 +5,11 @@ import TabItem from '@theme/TabItem'
 
 ## `NX::useItem`
 
-From client side ✔️
+:::caution
 
-From server side ❌
+Use Only from **Client** Side !
+
+:::
 
 <Tabs>
 <TabItem value="ts" label="TypeScript/JavaScript">
@@ -21,51 +23,6 @@ emit('NX::useItem', 'bread')
 
 ```lua
 TriggerEvent('NX::useItem', 'bread')
-```
-
-</TabItem>
-</Tabs>
-
----
-
-## `NX::createItem`
-
-From client side ❌
-
-From server side ✔️
-
-<Tabs>
-<TabItem value="ts" label="TypeScript/JavaScript">
-
-```ts
-emit('NX::createItem', {
-    label: 'AK47',
-    weight: 50,
-    type: 'gun',
-    name: 'ak47'
-    props: 'w_ar_assaultrifle'
-}, (res) => {
-    if(res.status === 'succes') {
-        console.log(res.message)
-    }
-})
-```
-
-</TabItem>
-<TabItem value="lua" label="Lua">
-
-```lua
-TriggerEvent('NX::createItem', {
-    label = 'AK47',
-    weight = 50,
-    type = 'gun',
-    name = 'ak47'
-    props = 'w_ar_assaultrifle'
-}, function (res)
-    if(res.status == 'succes') then
-        print(res.message)
-    end
-end)
 ```
 
 </TabItem>
